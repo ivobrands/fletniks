@@ -1,0 +1,17 @@
+version: '2.0'
+services:
+  fletnixdatastore:
+    image: microsoft/mssql-server-linux
+    volumes:
+      - db_data:/var/lib/mysql
+    restart: always
+    environment:
+      ACCEPT_EULA: Y
+      SA_PASSWORD: test1234!
+    ports:
+      - "1433:1433"
+volumes:
+  db_data:
+
+#docker cp ./FLETNIX.bacpac {container_name}:/tmp/fletnix.bacpac
+#docker exec {container_name} /opt/mssql/bin/sqlpackage /a:Import /tsn:tcp:localhost /tdn:Fletnix /tu:sa /tp:test1234! /sf:/tmp/fletnix.bacpac
