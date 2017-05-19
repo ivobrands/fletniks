@@ -22,6 +22,38 @@
           "target": "Package",
           "version": "1.1.1"
         },
+        "IdentityModel": {
+          "target": "Package",
+          "version": "2.8.0"
+        },
+        "IdentityServer4": {
+          "target": "Package",
+          "version": "1.5.1"
+        },
+        "IdentityServer4.AccessTokenValidation": {
+          "target": "Package",
+          "version": "1.2.0"
+        },
+        "IdentityServer4.AspNetIdentity": {
+          "target": "Package",
+          "version": "1.0.1"
+        },
+        "IdentityServer4.EntityFramework": {
+          "target": "Package",
+          "version": "1.0.1"
+        },
+        "Microsoft.AspNetCore.Authentication.OpenIdConnect": {
+          "target": "Package",
+          "version": "1.1.2"
+        },
+        "Microsoft.AspNetCore.Authentication.Cookies": {
+          "target": "Package",
+          "version": "1.1.2"
+        },
+        "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+          "target": "Package",
+          "version": "1.1.2"
+        },
         "Microsoft.EntityFrameworkCore.Tools": {
           "target": "Package",
           "version": "1.1.0"
@@ -31,6 +63,10 @@
           "version": "1.1.1"
         },
         "Microsoft.EntityFrameworkCore.SqlServer": {
+          "target": "Package",
+          "version": "1.1.1"
+        },
+        "Microsoft.EntityFrameworkCore.InMemory": {
           "target": "Package",
           "version": "1.1.1"
         },
@@ -78,6 +114,17 @@
       "imports": [
         "portable-net45+win8"
       ]
+    }
+  },
+  "runtimes": {
+    "win": {
+      "#import": []
+    },
+    "win-x64": {
+      "#import": []
+    },
+    "win-x86": {
+      "#import": []
     }
   }
 }

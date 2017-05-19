@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using fletnix.Models;
+using IdentityModel;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Microsoft.IdentityModel.Tokens;
 
 namespace fletnix
 {
@@ -31,6 +33,10 @@ namespace fletnix
             // Add framework services.
             services.AddMvc();
 
+            services.AddScoped<IMovieRepsitory, MovieRepository>();
+            services.AddScoped<IMovieCastRepository, MovieCastRepository>();
+
+
             services.AddDbContext<fletnixContext>();
 
         }
@@ -53,6 +59,19 @@ namespace fletnix
             }
 
             app.UseStaticFiles();
+
+            app.UseCookieAuthentication(new CookieAuthenticationOptions
+            {
+                AuthenticationScheme = "cookie"
+            });
+
+            app.UseOpenIdConnectAuthentication(new OpenIdConnectOptions {
+                ClientId = "Fletnix",
+                RequireHttpsMetadata = false,
+                Authority = "http://localhost:56494/",
+                SignInScheme = "cookie"
+            });
+
 
             app.UseMvc(routes =>
             {

@@ -1,0 +1,1143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="73f9765b-0c62-4def-b0e8-c84938c312dd" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../fletnix/Controllers/Api/ApiMovieCastController.cs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../fletnix/Controllers/Api/ApiMovieController.cs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../fletnix/Models/Repositories/IMovieCastRepository.cs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../fletnix/Models/Repositories/IMovieRepsitory.cs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../fletnix/Models/Repositories/MovieCastRepository.cs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../fletnix/Models/Repositories/MovieRepository.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fletnix/bin/Debug/netcoreapp1.1/fletnix.dll" afterPath="$PROJECT_DIR$/../fletnix/bin/Debug/netcoreapp1.1/fletnix.dll" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fletnix/bin/Debug/netcoreapp1.1/fletnix.pdb" afterPath="$PROJECT_DIR$/../fletnix/bin/Debug/netcoreapp1.1/fletnix.pdb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fletnix/obj/Debug/netcoreapp1.1/fletnix.csproj.CoreCompileInputs.cache" afterPath="$PROJECT_DIR$/../fletnix/obj/Debug/netcoreapp1.1/fletnix.csproj.CoreCompileInputs.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fletnix/obj/Debug/netcoreapp1.1/fletnix.csprojResolveAssemblyReference.cache" afterPath="$PROJECT_DIR$/../fletnix/obj/Debug/netcoreapp1.1/fletnix.csprojResolveAssemblyReference.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fletnix/obj/Debug/netcoreapp1.1/fletnix.dll" afterPath="$PROJECT_DIR$/../fletnix/obj/Debug/netcoreapp1.1/fletnix.dll" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fletnix/obj/Debug/netcoreapp1.1/fletnix.pdb" afterPath="$PROJECT_DIR$/../fletnix/obj/Debug/netcoreapp1.1/fletnix.pdb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.idea/.idea.fletnix/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../.idea/.idea.fletnix/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fletnix.userprefs" afterPath="$PROJECT_DIR$/../fletnix.userprefs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fletnix/Controllers/HomeController.cs" afterPath="$PROJECT_DIR$/../fletnix/Controllers/HomeController.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fletnix/Controllers/MovieController.cs" afterPath="$PROJECT_DIR$/../fletnix/Controllers/MovieController.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fletnix/Startup.cs" afterPath="$PROJECT_DIR$/../fletnix/Startup.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fletnix/Views/Movie/Edit.cshtml" afterPath="$PROJECT_DIR$/../fletnix/Views/Movie/Edit.cshtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fletnix/Views/Shared/_Layout.cshtml" afterPath="$PROJECT_DIR$/../fletnix/Views/Shared/_Layout.cshtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fletnix/bin/Debug/netcoreapp1.1/fletnix.deps.json" afterPath="$PROJECT_DIR$/../fletnix/bin/Debug/netcoreapp1.1/fletnix.deps.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fletnix/fletnix.csproj" afterPath="$PROJECT_DIR$/../fletnix/fletnix.csproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fletnix/obj/project.assets.json" afterPath="$PROJECT_DIR$/../fletnix/obj/project.assets.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fletnix/obj/project.packagespec.json" afterPath="$PROJECT_DIR$/../fletnix/obj/project.packagespec.json" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Startup.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/AuthenticationServer/Startup.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="319">
+              <caret line="106" column="13" lean-forward="false" selection-start-line="106" selection-start-column="13" selection-end-line="106" selection-end-column="13" />
+              <folding>
+                <marker date="1495202497000" expanded="true" signature="6:714" ph="..." />
+                <marker date="1495202497000" expanded="true" signature="746:4283" ph="{...}" />
+                <marker date="1495202497000" expanded="true" signature="773:4281" ph="{...}" />
+                <marker date="1495202497000" expanded="true" signature="827:1215" ph="{...}" />
+                <marker date="1495202497000" expanded="true" signature="1442:3519" ph="{...}" />
+                <marker date="1495202497000" expanded="true" signature="1498:2115" ph="/* services.AddTransient&lt;IdentitySeedData&gt;(); ... */" />
+                <marker date="1495202497000" expanded="true" signature="2140:3087" ph="/* var migrationsAssembly = typeof(Startup).GetTypeInfo().Assembly.GetName().Name; ... */" />
+                <marker date="1495202497000" expanded="true" signature="3737:4275" ph="{...}" />
+                <marker date="1495202497000" expanded="true" signature="3898:4013" ph="{...}" />
+                <marker date="1495202497000" expanded="true" signature="4030:4114" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="appsettings.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AuthenticationServer/appsettings.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="69" lean-forward="false" selection-start-line="7" selection-start-column="69" selection-end-line="7" selection-end-column="69" />
+              <folding>
+                <marker date="1495202449000" expanded="true" signature="15:584" ph="{...}" />
+                <marker date="1495202449000" expanded="true" signature="61:95" ph="{...}" />
+                <marker date="1495202449000" expanded="true" signature="113:580" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HomeController.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AuthenticationServer/Quickstart/Home/HomeController.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1492146974000" expanded="true" signature="0:175" ph="/* Copyright (c) Brock Allen &amp; Dominick Baier. All rights reserved. ... */" />
+                <marker date="1492146974000" expanded="true" signature="184:271" ph="..." />
+                <marker date="1492146974000" expanded="true" signature="312:1167" ph="{...}" />
+                <marker date="1492146974000" expanded="true" signature="381:1165" ph="{...}" />
+                <marker date="1492146974000" expanded="true" signature="538:598" ph="{...}" />
+                <marker date="1492146974000" expanded="true" signature="636:683" ph="{...}" />
+                <marker date="1492146974000" expanded="true" signature="693:762" ph="/// Shows the error page ... " />
+                <marker date="1492146974000" expanded="true" signature="825:1159" ph="{...}" />
+                <marker date="1492146974000" expanded="true" signature="1046:1110" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Clients.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AuthenticationServer/Helpers/Clients.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="30" column="1" lean-forward="false" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
+              <folding>
+                <marker date="1495116303000" expanded="false" signature="6:122" ph="..." />
+                <marker date="1495116303000" expanded="true" signature="162:1102" ph="{...}" />
+                <marker date="1495116303000" expanded="true" signature="192:1100" ph="{...}" />
+                <marker date="1495116303000" expanded="true" signature="242:1094" ph="{...}" />
+                <marker date="1495116303000" expanded="true" signature="280:1081" ph="{...}" />
+                <marker date="1495116303000" expanded="true" signature="309:1067" ph="{...}" />
+                <marker date="1495116303000" expanded="true" signature="559:869" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Resources.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AuthenticationServer/Helpers/Resources.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="25" column="19" lean-forward="false" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
+              <folding>
+                <marker date="1495109221000" expanded="true" signature="6:63" ph="..." />
+                <marker date="1495109221000" expanded="true" signature="103:1243" ph="{...}" />
+                <marker date="1495109221000" expanded="true" signature="135:1241" ph="{...}" />
+                <marker date="1495109221000" expanded="true" signature="212:581" ph="{...}" />
+                <marker date="1495109221000" expanded="true" signature="260:570" ph="{...}" />
+                <marker date="1495109221000" expanded="true" signature="443:556" ph="{...}" />
+                <marker date="1495109221000" expanded="true" signature="648:1235" ph="{...}" />
+                <marker date="1495109221000" expanded="true" signature="691:1224" ph="{...}" />
+                <marker date="1495109221000" expanded="true" signature="725:1210" ph="{...}" />
+                <marker date="1495109221000" expanded="true" signature="1063:1192" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>a</find>
+      <find>aut</find>
+      <find>authen</find>
+      <find>authentic</find>
+      <find>authenticateC</find>
+      <find>authenticate</find>
+      <find>authenticat</find>
+      <find>conte</find>
+      <find>context</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/AuthenticationServer/AuthenticationServer.csproj" />
+        <option value="$PROJECT_DIR$/AuthenticationServer/Controllers/HomeController.cs" />
+        <option value="$PROJECT_DIR$/AuthenticationServer/Helpers/Resources.cs" />
+        <option value="$PROJECT_DIR$/AuthenticationServer/Helpers/Users.cs" />
+        <option value="$PROJECT_DIR$/AuthenticationServer/Helpers/Clients.cs" />
+        <option value="$PROJECT_DIR$/AuthenticationServer/Data/authenticationDbContext.cs" />
+        <option value="$PROJECT_DIR$/AuthenticationServer/Data/fletnixDbContext.cs" />
+        <option value="$PROJECT_DIR$/AuthenticationServer/Data/fletnixContext.cs" />
+        <option value="$PROJECT_DIR$/AuthenticationServer/Models/fletnixContext.cs" />
+        <option value="$PROJECT_DIR$/AuthenticationServer/Models/authenticationDbContext.cs" />
+        <option value="$PROJECT_DIR$/AuthenticationServer/Models/Customer.cs" />
+        <option value="$PROJECT_DIR$/AuthenticationServer/Quickstart/Account/AccountController.cs" />
+        <option value="$PROJECT_DIR$/AuthenticationServer/appsettings.json" />
+        <option value="$PROJECT_DIR$/AuthenticationServer/Startup.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1440" />
+    <option name="height" value="838" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="SolutionExplorer" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="SolutionExplorer">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AuthenticationServer (1 project)" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AuthenticationServer" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AuthenticationServer (1 project)" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AuthenticationServer" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Quickstart" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AuthenticationServer (1 project)" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AuthenticationServer" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Quickstart" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Consent" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+        <option name="show-file-system" value="false" />
+        <option name="show-all-items" value="false" />
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.customizations" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected=".NET Project.Default">
+    <configuration default="true" type="ChromiumRemoteDebugType" factoryName="Chromium Remote">
+      <method />
+    </configuration>
+    <configuration default="true" type="CompoundRunConfigurationType" factoryName="Compound Run Configuration">
+      <method />
+    </configuration>
+    <configuration default="true" type="DotNetProject" factoryName=".NET Project">
+      <option name="PROJECT_PATH" value="" />
+      <option name="PROJECT_KIND" value="None" />
+      <option name="PROJECT_TFM" value="" />
+      <option name="EXE_PATH" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="USE_MONO" value="0" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
+      <node-interpreter value="project" />
+      <working-dir value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="riderModule" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="RunExe" factoryName=".NET Executable">
+      <option name="EXE_PATH" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="riderModule" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="riderModule" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="riderModule" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;.&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Default" type="DotNetProject" factoryName=".NET Project">
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/AuthenticationServer/AuthenticationServer.csproj" />
+      <option name="PROJECT_KIND" value="Console" />
+      <option name="PROJECT_TFM" value=".NETCoreApp,Version=v1.1" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/AuthenticationServer/bin/Debug/netcoreapp1.1/AuthenticationServer.dll" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/AuthenticationServer" />
+      <option name="USE_MONO" value="0" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <envs />
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue=".NET Project.Default" />
+    </list>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="73f9765b-0c62-4def-b0e8-c84938c312dd" name="Default" comment="" />
+      <created>1495107573484</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1495107573484</updated>
+      <workItem from="1495107574773" duration="333000" />
+      <workItem from="1495107911231" duration="6477000" />
+      <workItem from="1495193642425" duration="2344000" />
+      <workItem from="1495196653813" duration="1257000" />
+      <workItem from="1495198799956" duration="2866000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="13277000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1440" height="838" extended-state="6" />
+    <layout>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Errors In Solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.308311" sideWeight="0.28612304" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Unit Tests" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.308311" sideWeight="0.71387696" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32841823" sideWeight="0.49713877" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962137" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Change Signature" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23175965" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32841823" sideWeight="0.49713877" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="processedProjectFiles" value="true" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/AuthenticationServer/Startup.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="43" column="48" lean-forward="false" selection-start-line="43" selection-start-column="48" selection-end-line="43" selection-end-column="48" />
+          <folding>
+            <marker date="1495202497000" expanded="true" signature="6:714" ph="..." />
+            <marker date="1495202497000" expanded="true" signature="746:4283" ph="{...}" />
+            <marker date="1495202497000" expanded="true" signature="773:4281" ph="{...}" />
+            <marker date="1495202497000" expanded="true" signature="827:1215" ph="{...}" />
+            <marker date="1495202497000" expanded="true" signature="1442:3519" ph="{...}" />
+            <marker date="1495202497000" expanded="true" signature="1498:2115" ph="/* services.AddTransient&lt;IdentitySeedData&gt;(); ... */" />
+            <marker date="1495202497000" expanded="true" signature="2140:3087" ph="/* var migrationsAssembly = typeof(Startup).GetTypeInfo().Assembly.GetName().Name; ... */" />
+            <marker date="1495202497000" expanded="true" signature="3737:4275" ph="{...}" />
+            <marker date="1495202497000" expanded="true" signature="3898:4013" ph="{...}" />
+            <marker date="1495202497000" expanded="true" signature="4030:4114" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AuthenticationServer/Models/authenticationDbContext.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="197" lean-forward="false" selection-start-line="14" selection-start-column="197" selection-end-line="14" selection-end-column="197" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AuthenticationServer/Migrations/20170519113215_IdentityClasses.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="28" column="14" lean-forward="false" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AuthenticationServer/Views/Home/Index.cshtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1492146974000" expanded="true" signature="0:1170" ph="&lt;div.../&gt;" />
+            <marker date="1492146974000" expanded="true" signature="31:301" ph="&lt;div.../&gt;" />
+            <marker date="1492146974000" expanded="true" signature="69:290" ph="&lt;div.../&gt;" />
+            <marker date="1492146974000" expanded="true" signature="105:275" ph="&lt;h1.../&gt;" />
+            <marker date="1492146974000" expanded="true" signature="307:795" ph="&lt;div.../&gt;" />
+            <marker date="1492146974000" expanded="true" signature="333:625" ph="&lt;div.../&gt;" />
+            <marker date="1492146974000" expanded="true" signature="368:610" ph="&lt;p.../&gt;" />
+            <marker date="1492146974000" expanded="true" signature="634:784" ph="&lt;div.../&gt;" />
+            <marker date="1492146974000" expanded="true" signature="669:769" ph="&lt;p.../&gt;" />
+            <marker date="1492146974000" expanded="true" signature="800:1163" ph="&lt;div.../&gt;" />
+            <marker date="1492146974000" expanded="true" signature="826:1152" ph="&lt;div.../&gt;" />
+            <marker date="1492146974000" expanded="true" signature="861:1137" ph="&lt;p.../&gt;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AuthenticationServer/Quickstart/Home/HomeController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1492146974000" expanded="true" signature="0:175" ph="/* Copyright (c) Brock Allen &amp; Dominick Baier. All rights reserved. ... */" />
+            <marker date="1492146974000" expanded="true" signature="184:271" ph="..." />
+            <marker date="1492146974000" expanded="true" signature="312:1167" ph="{...}" />
+            <marker date="1492146974000" expanded="true" signature="381:1165" ph="{...}" />
+            <marker date="1492146974000" expanded="true" signature="538:598" ph="{...}" />
+            <marker date="1492146974000" expanded="true" signature="636:683" ph="{...}" />
+            <marker date="1492146974000" expanded="true" signature="693:762" ph="/// Shows the error page ... " />
+            <marker date="1492146974000" expanded="true" signature="825:1159" ph="{...}" />
+            <marker date="1492146974000" expanded="true" signature="1046:1110" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AuthenticationServer/Helpers/Clients.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="1" lean-forward="false" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
+          <folding>
+            <marker date="1495116303000" expanded="false" signature="6:122" ph="..." />
+            <marker date="1495116303000" expanded="true" signature="162:1102" ph="{...}" />
+            <marker date="1495116303000" expanded="true" signature="192:1100" ph="{...}" />
+            <marker date="1495116303000" expanded="true" signature="242:1094" ph="{...}" />
+            <marker date="1495116303000" expanded="true" signature="280:1081" ph="{...}" />
+            <marker date="1495116303000" expanded="true" signature="309:1067" ph="{...}" />
+            <marker date="1495116303000" expanded="true" signature="559:869" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AuthenticationServer/Helpers/Resources.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="37" lean-forward="false" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="37" />
+          <folding>
+            <marker date="1495109221000" expanded="true" signature="6:63" ph="..." />
+            <marker date="1495109221000" expanded="true" signature="103:1243" ph="{...}" />
+            <marker date="1495109221000" expanded="true" signature="135:1241" ph="{...}" />
+            <marker date="1495109221000" expanded="true" signature="212:581" ph="{...}" />
+            <marker date="1495109221000" expanded="true" signature="260:570" ph="{...}" />
+            <marker date="1495109221000" expanded="true" signature="443:556" ph="{...}" />
+            <marker date="1495109221000" expanded="true" signature="648:1235" ph="{...}" />
+            <marker date="1495109221000" expanded="true" signature="691:1224" ph="{...}" />
+            <marker date="1495109221000" expanded="true" signature="725:1210" ph="{...}" />
+            <marker date="1495109221000" expanded="true" signature="1063:1192" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AuthenticationServer/Helpers/Users.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="1" lean-forward="false" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+          <folding>
+            <marker date="1495109288000" expanded="true" signature="6:112" ph="..." />
+            <marker date="1495109288000" expanded="true" signature="152:784" ph="{...}" />
+            <marker date="1495109288000" expanded="true" signature="180:782" ph="{...}" />
+            <marker date="1495109288000" expanded="true" signature="225:776" ph="{...}" />
+            <marker date="1495109288000" expanded="true" signature="265:765" ph="{...}" />
+            <marker date="1495109288000" expanded="true" signature="296:751" ph="{...}" />
+            <marker date="1495109288000" expanded="true" signature="502:733" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AuthenticationServer/Data/fletnixDbContext.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AuthenticationServer/Startup.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="43" column="48" lean-forward="false" selection-start-line="43" selection-start-column="48" selection-end-line="43" selection-end-column="48" />
+          <folding>
+            <marker date="1495202497000" expanded="true" signature="6:714" ph="..." />
+            <marker date="1495202497000" expanded="true" signature="746:4283" ph="{...}" />
+            <marker date="1495202497000" expanded="true" signature="773:4281" ph="{...}" />
+            <marker date="1495202497000" expanded="true" signature="827:1215" ph="{...}" />
+            <marker date="1495202497000" expanded="true" signature="1442:3519" ph="{...}" />
+            <marker date="1495202497000" expanded="true" signature="1498:2115" ph="/* services.AddTransient&lt;IdentitySeedData&gt;(); ... */" />
+            <marker date="1495202497000" expanded="true" signature="2140:3087" ph="/* var migrationsAssembly = typeof(Startup).GetTypeInfo().Assembly.GetName().Name; ... */" />
+            <marker date="1495202497000" expanded="true" signature="3737:4275" ph="{...}" />
+            <marker date="1495202497000" expanded="true" signature="3898:4013" ph="{...}" />
+            <marker date="1495202497000" expanded="true" signature="4030:4114" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AuthenticationServer/Migrations/20170519113215_IdentityClasses.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="28" column="14" lean-forward="false" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AuthenticationServer/Views/Home/Index.cshtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1492146974000" expanded="true" signature="0:1170" ph="&lt;div.../&gt;" />
+            <marker date="1492146974000" expanded="true" signature="31:301" ph="&lt;div.../&gt;" />
+            <marker date="1492146974000" expanded="true" signature="69:290" ph="&lt;div.../&gt;" />
+            <marker date="1492146974000" expanded="true" signature="105:275" ph="&lt;h1.../&gt;" />
+            <marker date="1492146974000" expanded="true" signature="307:795" ph="&lt;div.../&gt;" />
+            <marker date="1492146974000" expanded="true" signature="333:625" ph="&lt;div.../&gt;" />
+            <marker date="1492146974000" expanded="true" signature="368:610" ph="&lt;p.../&gt;" />
+            <marker date="1492146974000" expanded="true" signature="634:784" ph="&lt;div.../&gt;" />
+            <marker date="1492146974000" expanded="true" signature="669:769" ph="&lt;p.../&gt;" />
+            <marker date="1492146974000" expanded="true" signature="800:1163" ph="&lt;div.../&gt;" />
+            <marker date="1492146974000" expanded="true" signature="826:1152" ph="&lt;div.../&gt;" />
+            <marker date="1492146974000" expanded="true" signature="861:1137" ph="&lt;p.../&gt;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AuthenticationServer/Quickstart/Home/HomeController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1492146974000" expanded="true" signature="0:175" ph="/* Copyright (c) Brock Allen &amp; Dominick Baier. All rights reserved. ... */" />
+            <marker date="1492146974000" expanded="true" signature="184:271" ph="..." />
+            <marker date="1492146974000" expanded="true" signature="312:1167" ph="{...}" />
+            <marker date="1492146974000" expanded="true" signature="381:1165" ph="{...}" />
+            <marker date="1492146974000" expanded="true" signature="538:598" ph="{...}" />
+            <marker date="1492146974000" expanded="true" signature="636:683" ph="{...}" />
+            <marker date="1492146974000" expanded="true" signature="693:762" ph="/// Shows the error page ... " />
+            <marker date="1492146974000" expanded="true" signature="825:1159" ph="{...}" />
+            <marker date="1492146974000" expanded="true" signature="1046:1110" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AuthenticationServer/Helpers/Clients.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="1" lean-forward="false" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
+          <folding>
+            <marker date="1495116303000" expanded="false" signature="6:122" ph="..." />
+            <marker date="1495116303000" expanded="true" signature="162:1102" ph="{...}" />
+            <marker date="1495116303000" expanded="true" signature="192:1100" ph="{...}" />
+            <marker date="1495116303000" expanded="true" signature="242:1094" ph="{...}" />
+            <marker date="1495116303000" expanded="true" signature="280:1081" ph="{...}" />
+            <marker date="1495116303000" expanded="true" signature="309:1067" ph="{...}" />
+            <marker date="1495116303000" expanded="true" signature="559:869" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AuthenticationServer/Helpers/Resources.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="37" lean-forward="false" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="37" />
+          <folding>
+            <marker date="1495109221000" expanded="true" signature="6:63" ph="..." />
+            <marker date="1495109221000" expanded="true" signature="103:1243" ph="{...}" />
+            <marker date="1495109221000" expanded="true" signature="135:1241" ph="{...}" />
+            <marker date="1495109221000" expanded="true" signature="212:581" ph="{...}" />
+            <marker date="1495109221000" expanded="true" signature="260:570" ph="{...}" />
+            <marker date="1495109221000" expanded="true" signature="443:556" ph="{...}" />
+            <marker date="1495109221000" expanded="true" signature="648:1235" ph="{...}" />
+            <marker date="1495109221000" expanded="true" signature="691:1224" ph="{...}" />
+            <marker date="1495109221000" expanded="true" signature="725:1210" ph="{...}" />
+            <marker date="1495109221000" expanded="true" signature="1063:1192" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AuthenticationServer/Helpers/Users.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="1" lean-forward="false" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+          <folding>
+            <marker date="1495109288000" expanded="true" signature="6:112" ph="..." />
+            <marker date="1495109288000" expanded="true" signature="152:784" ph="{...}" />
+            <marker date="1495109288000" expanded="true" signature="180:782" ph="{...}" />
+            <marker date="1495109288000" expanded="true" signature="225:776" ph="{...}" />
+            <marker date="1495109288000" expanded="true" signature="265:765" ph="{...}" />
+            <marker date="1495109288000" expanded="true" signature="296:751" ph="{...}" />
+            <marker date="1495109288000" expanded="true" signature="502:733" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AuthenticationServer/Models/authenticationDbContext.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="11" column="85" lean-forward="true" selection-start-line="11" selection-start-column="85" selection-end-line="11" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AuthenticationServer/Startup.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1495202497000" expanded="true" signature="6:714" ph="..." />
+            <marker date="1495202497000" expanded="true" signature="746:4283" ph="{...}" />
+            <marker date="1495202497000" expanded="true" signature="773:4281" ph="{...}" />
+            <marker date="1495202497000" expanded="true" signature="827:1215" ph="{...}" />
+            <marker date="1495202497000" expanded="true" signature="1442:3519" ph="{...}" />
+            <marker date="1495202497000" expanded="true" signature="1498:2115" ph="/* services.AddTransient&lt;IdentitySeedData&gt;(); ... */" />
+            <marker date="1495202497000" expanded="true" signature="2140:3087" ph="/* var migrationsAssembly = typeof(Startup).GetTypeInfo().Assembly.GetName().Name; ... */" />
+            <marker date="1495202497000" expanded="true" signature="3737:4275" ph="{...}" />
+            <marker date="1495202497000" expanded="true" signature="3898:4013" ph="{...}" />
+            <marker date="1495202497000" expanded="true" signature="4030:4114" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AuthenticationServer/Views/Home/Index.cshtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1492146974000" expanded="true" signature="0:1170" ph="&lt;div.../&gt;" />
+            <marker date="1492146974000" expanded="true" signature="31:301" ph="&lt;div.../&gt;" />
+            <marker date="1492146974000" expanded="true" signature="69:290" ph="&lt;div.../&gt;" />
+            <marker date="1492146974000" expanded="true" signature="105:275" ph="&lt;h1.../&gt;" />
+            <marker date="1492146974000" expanded="true" signature="307:795" ph="&lt;div.../&gt;" />
+            <marker date="1492146974000" expanded="true" signature="333:625" ph="&lt;div.../&gt;" />
+            <marker date="1492146974000" expanded="true" signature="368:610" ph="&lt;p.../&gt;" />
+            <marker date="1492146974000" expanded="true" signature="634:784" ph="&lt;div.../&gt;" />
+            <marker date="1492146974000" expanded="true" signature="669:769" ph="&lt;p.../&gt;" />
+            <marker date="1492146974000" expanded="true" signature="800:1163" ph="&lt;div.../&gt;" />
+            <marker date="1492146974000" expanded="true" signature="826:1152" ph="&lt;div.../&gt;" />
+            <marker date="1492146974000" expanded="true" signature="861:1137" ph="&lt;p.../&gt;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AuthenticationServer/Quickstart/Home/HomeController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1492146974000" expanded="true" signature="0:175" ph="/* Copyright (c) Brock Allen &amp; Dominick Baier. All rights reserved. ... */" />
+            <marker date="1492146974000" expanded="true" signature="184:271" ph="..." />
+            <marker date="1492146974000" expanded="true" signature="312:1167" ph="{...}" />
+            <marker date="1492146974000" expanded="true" signature="381:1165" ph="{...}" />
+            <marker date="1492146974000" expanded="true" signature="538:598" ph="{...}" />
+            <marker date="1492146974000" expanded="true" signature="636:683" ph="{...}" />
+            <marker date="1492146974000" expanded="true" signature="693:762" ph="/// Shows the error page ... " />
+            <marker date="1492146974000" expanded="true" signature="825:1159" ph="{...}" />
+            <marker date="1492146974000" expanded="true" signature="1046:1110" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AuthenticationServer/Helpers/Clients.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="1" lean-forward="false" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
+          <folding>
+            <marker date="1495116303000" expanded="false" signature="6:122" ph="..." />
+            <marker date="1495116303000" expanded="true" signature="162:1102" ph="{...}" />
+            <marker date="1495116303000" expanded="true" signature="192:1100" ph="{...}" />
+            <marker date="1495116303000" expanded="true" signature="242:1094" ph="{...}" />
+            <marker date="1495116303000" expanded="true" signature="280:1081" ph="{...}" />
+            <marker date="1495116303000" expanded="true" signature="309:1067" ph="{...}" />
+            <marker date="1495116303000" expanded="true" signature="559:869" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AuthenticationServer/Helpers/Resources.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="37" lean-forward="false" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="37" />
+          <folding>
+            <marker date="1495109221000" expanded="true" signature="6:63" ph="..." />
+            <marker date="1495109221000" expanded="true" signature="103:1243" ph="{...}" />
+            <marker date="1495109221000" expanded="true" signature="135:1241" ph="{...}" />
+            <marker date="1495109221000" expanded="true" signature="212:581" ph="{...}" />
+            <marker date="1495109221000" expanded="true" signature="260:570" ph="{...}" />
+            <marker date="1495109221000" expanded="true" signature="443:556" ph="{...}" />
+            <marker date="1495109221000" expanded="true" signature="648:1235" ph="{...}" />
+            <marker date="1495109221000" expanded="true" signature="691:1224" ph="{...}" />
+            <marker date="1495109221000" expanded="true" signature="725:1210" ph="{...}" />
+            <marker date="1495109221000" expanded="true" signature="1063:1192" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AuthenticationServer/Helpers/Users.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="1" lean-forward="false" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+          <folding>
+            <marker date="1495109288000" expanded="true" signature="6:112" ph="..." />
+            <marker date="1495109288000" expanded="true" signature="152:784" ph="{...}" />
+            <marker date="1495109288000" expanded="true" signature="180:782" ph="{...}" />
+            <marker date="1495109288000" expanded="true" signature="225:776" ph="{...}" />
+            <marker date="1495109288000" expanded="true" signature="265:765" ph="{...}" />
+            <marker date="1495109288000" expanded="true" signature="296:751" ph="{...}" />
+            <marker date="1495109288000" expanded="true" signature="502:733" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AuthenticationServer/Startup.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1495202497000" expanded="true" signature="6:714" ph="..." />
+            <marker date="1495202497000" expanded="true" signature="746:4283" ph="{...}" />
+            <marker date="1495202497000" expanded="true" signature="773:4281" ph="{...}" />
+            <marker date="1495202497000" expanded="true" signature="827:1215" ph="{...}" />
+            <marker date="1495202497000" expanded="true" signature="1442:3519" ph="{...}" />
+            <marker date="1495202497000" expanded="true" signature="1498:2115" ph="/* services.AddTransient&lt;IdentitySeedData&gt;(); ... */" />
+            <marker date="1495202497000" expanded="true" signature="2140:3087" ph="/* var migrationsAssembly = typeof(Startup).GetTypeInfo().Assembly.GetName().Name; ... */" />
+            <marker date="1495202497000" expanded="true" signature="3737:4275" ph="{...}" />
+            <marker date="1495202497000" expanded="true" signature="3898:4013" ph="{...}" />
+            <marker date="1495202497000" expanded="true" signature="4030:4114" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AuthenticationServer/AuthenticationServer.csproj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="36" column="14" lean-forward="false" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.local/share/JetBrains/Shared/v08/DecompilerCache/decompiler/465F7AC4-8B67-477A-A664-E360E6543D3E/a4/a2a98420/Client.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="15" lean-forward="false" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AuthenticationServer/Controllers/HomeController.cs" />
+    <entry file="file://$PROJECT_DIR$/AuthenticationServer.sln">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AuthenticationServer/AuthenticationServer.csproj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="33" column="14" lean-forward="false" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AuthenticationServer/Migrations/20170519113215_IdentityClasses.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="28" column="14" lean-forward="false" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AuthenticationServer/Data/fletnixDbContext.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AuthenticationServer/Quickstart/Account/AccountController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="33" lean-forward="false" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
+          <folding>
+            <marker date="1495200940000" expanded="true" signature="0:175" ph="/* Copyright (c) Brock Allen &amp; Dominick Baier. All rights reserved. ... */" />
+            <marker date="1495200940000" expanded="true" signature="184:762" ph="..." />
+            <marker date="1495200940000" expanded="true" signature="803:11434" ph="{...}" />
+            <marker date="1495200940000" expanded="true" signature="810:1240" ph="/// This sample controller implements a typical login/logout/provision workflow for local and external accounts. ... " />
+            <marker date="1495200940000" expanded="true" signature="1310:11432" ph="{...}" />
+            <marker date="1495200940000" expanded="true" signature="1754:2191" ph="{...}" />
+            <marker date="1495200940000" expanded="true" signature="2201:2265" ph="/// Show login page ... " />
+            <marker date="1495200940000" expanded="true" signature="2348:2669" ph="{...}" />
+            <marker date="1495200940000" expanded="true" signature="2472:2629" ph="{...}" />
+            <marker date="1495200940000" expanded="true" signature="2679:2772" ph="/// Handle postback from username/password login ... " />
+            <marker date="1495200940000" expanded="true" signature="2897:4405" ph="{...}" />
+            <marker date="1495200940000" expanded="true" signature="2935:4296" ph="{...}" />
+            <marker date="1495200940000" expanded="true" signature="3138:4079" ph="{...}" />
+            <marker date="1495200940000" expanded="true" signature="3282:3551" ph="{...}" />
+            <marker date="1495200940000" expanded="true" signature="3345:3528" ph="{...}" />
+            <marker date="1495200940000" expanded="true" signature="3936:4017" ph="{...}" />
+            <marker date="1495200940000" expanded="true" signature="4415:4518" ph="/// initiate roundtrip to external authentication provider ... " />
+            <marker date="1495200940000" expanded="true" signature="4626:6955" ph="{...}" />
+            <marker date="1495200940000" expanded="true" signature="4942:6581" ph="{...}" />
+            <marker date="1495200940000" expanded="true" signature="5128:6291" ph="{...}" />
+            <marker date="1495200940000" expanded="true" signature="5723:6050" ph="{...}" />
+            <marker date="1495200940000" expanded="true" signature="6312:6567" ph="{...}" />
+            <marker date="1495200940000" expanded="true" signature="6598:6945" ph="{...}" />
+            <marker date="1495200940000" expanded="true" signature="6750:6869" ph="{...}" />
+            <marker date="1495200940000" expanded="true" signature="6965:7056" ph="/// Post processing of external authentication ... " />
+            <marker date="1495200940000" expanded="true" signature="7156:9555" ph="{...}" />
+            <marker date="1495200940000" expanded="true" signature="7394:7479" ph="{...}" />
+            <marker date="1495200940000" expanded="true" signature="7661:7771" ph="{...}" />
+            <marker date="1495200940000" expanded="true" signature="7809:7879" ph="{...}" />
+            <marker date="1495200940000" expanded="true" signature="8134:8388" ph="{...}" />
+            <marker date="1495200940000" expanded="true" signature="8559:8659" ph="{...}" />
+            <marker date="1495200940000" expanded="true" signature="8816:8997" ph="{...}" />
+            <marker date="1495200940000" expanded="true" signature="9450:9509" ph="{...}" />
+            <marker date="1495200940000" expanded="true" signature="9565:9630" ph="/// Show logout page ... " />
+            <marker date="1495200940000" expanded="true" signature="9713:9994" ph="{...}" />
+            <marker date="1495200940000" expanded="true" signature="9843:9954" ph="{...}" />
+            <marker date="1495200940000" expanded="true" signature="10004:10080" ph="/// Handle logout page postback ... " />
+            <marker date="1495200940000" expanded="true" signature="10206:11426" ph="{...}" />
+            <marker date="1495200940000" expanded="true" signature="10341:11024" ph="{...}" />
+            <marker date="1495200940000" expanded="true" signature="10458:10747" ph="{...}" />
+            <marker date="1495200940000" expanded="true" signature="10855:10891" ph="{...}" />
+            <marker date="1495200940000" expanded="true" signature="10974:11010" ph="{...}" />
+            <marker date="1495200940000" expanded="true" signature="11238:11373" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AuthenticationServer/Views/Home/Index.cshtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1492146974000" expanded="true" signature="0:1170" ph="&lt;div.../&gt;" />
+            <marker date="1492146974000" expanded="true" signature="31:301" ph="&lt;div.../&gt;" />
+            <marker date="1492146974000" expanded="true" signature="69:290" ph="&lt;div.../&gt;" />
+            <marker date="1492146974000" expanded="true" signature="105:275" ph="&lt;h1.../&gt;" />
+            <marker date="1492146974000" expanded="true" signature="307:795" ph="&lt;div.../&gt;" />
+            <marker date="1492146974000" expanded="true" signature="333:625" ph="&lt;div.../&gt;" />
+            <marker date="1492146974000" expanded="true" signature="368:610" ph="&lt;p.../&gt;" />
+            <marker date="1492146974000" expanded="true" signature="634:784" ph="&lt;div.../&gt;" />
+            <marker date="1492146974000" expanded="true" signature="669:769" ph="&lt;p.../&gt;" />
+            <marker date="1492146974000" expanded="true" signature="800:1163" ph="&lt;div.../&gt;" />
+            <marker date="1492146974000" expanded="true" signature="826:1152" ph="&lt;div.../&gt;" />
+            <marker date="1492146974000" expanded="true" signature="861:1137" ph="&lt;p.../&gt;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AuthenticationServer/Models/Customer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="25" lean-forward="false" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AuthenticationServer/Models/authenticationDbContext.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AuthenticationServer/Models/fletnixContext.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="32" column="5" lean-forward="true" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AuthenticationServer/appsettings.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="69" lean-forward="false" selection-start-line="7" selection-start-column="69" selection-end-line="7" selection-end-column="69" />
+          <folding>
+            <marker date="1495202449000" expanded="true" signature="15:584" ph="{...}" />
+            <marker date="1495202449000" expanded="true" signature="61:95" ph="{...}" />
+            <marker date="1495202449000" expanded="true" signature="113:580" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AuthenticationServer/Quickstart/Home/HomeController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1492146974000" expanded="true" signature="0:175" ph="/* Copyright (c) Brock Allen &amp; Dominick Baier. All rights reserved. ... */" />
+            <marker date="1492146974000" expanded="true" signature="184:271" ph="..." />
+            <marker date="1492146974000" expanded="true" signature="312:1167" ph="{...}" />
+            <marker date="1492146974000" expanded="true" signature="381:1165" ph="{...}" />
+            <marker date="1492146974000" expanded="true" signature="538:598" ph="{...}" />
+            <marker date="1492146974000" expanded="true" signature="636:683" ph="{...}" />
+            <marker date="1492146974000" expanded="true" signature="693:762" ph="/// Shows the error page ... " />
+            <marker date="1492146974000" expanded="true" signature="825:1159" ph="{...}" />
+            <marker date="1492146974000" expanded="true" signature="1046:1110" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AuthenticationServer/Helpers/Clients.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="30" column="1" lean-forward="false" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
+          <folding>
+            <marker date="1495116303000" expanded="false" signature="6:122" ph="..." />
+            <marker date="1495116303000" expanded="true" signature="162:1102" ph="{...}" />
+            <marker date="1495116303000" expanded="true" signature="192:1100" ph="{...}" />
+            <marker date="1495116303000" expanded="true" signature="242:1094" ph="{...}" />
+            <marker date="1495116303000" expanded="true" signature="280:1081" ph="{...}" />
+            <marker date="1495116303000" expanded="true" signature="309:1067" ph="{...}" />
+            <marker date="1495116303000" expanded="true" signature="559:869" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AuthenticationServer/Helpers/Users.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="1" lean-forward="false" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+          <folding>
+            <marker date="1495109288000" expanded="true" signature="6:112" ph="..." />
+            <marker date="1495109288000" expanded="true" signature="152:784" ph="{...}" />
+            <marker date="1495109288000" expanded="true" signature="180:782" ph="{...}" />
+            <marker date="1495109288000" expanded="true" signature="225:776" ph="{...}" />
+            <marker date="1495109288000" expanded="true" signature="265:765" ph="{...}" />
+            <marker date="1495109288000" expanded="true" signature="296:751" ph="{...}" />
+            <marker date="1495109288000" expanded="true" signature="502:733" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AuthenticationServer/Helpers/Resources.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="19" lean-forward="false" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
+          <folding>
+            <marker date="1495109221000" expanded="true" signature="6:63" ph="..." />
+            <marker date="1495109221000" expanded="true" signature="103:1243" ph="{...}" />
+            <marker date="1495109221000" expanded="true" signature="135:1241" ph="{...}" />
+            <marker date="1495109221000" expanded="true" signature="212:581" ph="{...}" />
+            <marker date="1495109221000" expanded="true" signature="260:570" ph="{...}" />
+            <marker date="1495109221000" expanded="true" signature="443:556" ph="{...}" />
+            <marker date="1495109221000" expanded="true" signature="648:1235" ph="{...}" />
+            <marker date="1495109221000" expanded="true" signature="691:1224" ph="{...}" />
+            <marker date="1495109221000" expanded="true" signature="725:1210" ph="{...}" />
+            <marker date="1495109221000" expanded="true" signature="1063:1192" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AuthenticationServer/Startup.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="106" column="13" lean-forward="false" selection-start-line="106" selection-start-column="13" selection-end-line="106" selection-end-column="13" />
+          <folding>
+            <marker date="1495202497000" expanded="true" signature="6:714" ph="..." />
+            <marker date="1495202497000" expanded="true" signature="746:4283" ph="{...}" />
+            <marker date="1495202497000" expanded="true" signature="773:4281" ph="{...}" />
+            <marker date="1495202497000" expanded="true" signature="827:1215" ph="{...}" />
+            <marker date="1495202497000" expanded="true" signature="1442:3519" ph="{...}" />
+            <marker date="1495202497000" expanded="true" signature="1498:2115" ph="/* services.AddTransient&lt;IdentitySeedData&gt;(); ... */" />
+            <marker date="1495202497000" expanded="true" signature="2140:3087" ph="/* var migrationsAssembly = typeof(Startup).GetTypeInfo().Assembly.GetName().Name; ... */" />
+            <marker date="1495202497000" expanded="true" signature="3737:4275" ph="{...}" />
+            <marker date="1495202497000" expanded="true" signature="3898:4013" ph="{...}" />
+            <marker date="1495202497000" expanded="true" signature="4030:4114" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
