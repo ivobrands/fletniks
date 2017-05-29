@@ -123,13 +123,19 @@ namespace fletnix
                 return NotFound();
             }
 
-            var movie = await _context.Movie.SingleOrDefaultAsync(m => m.MovieId == id);
-            if (movie == null)
-            {
-                return NotFound();
-            }
-            ViewData["PreviousPart"] = new SelectList(_context.Movie, "MovieId", "Title", movie.PreviousPart);
-            return View(movie);
+            var movie = _context.Movie
+                .Include(director => director.MovieDirector).ThenInclude(person => person.Person)
+                .Include(cast => cast.MovieCast).ThenInclude(person => person.Person)
+                .Include(award => award.MovieAward)
+                .Include(genre => genre.MovieGenre).First(m => m.MovieId == id);
+
+            movie.PreviousPartNavigation = _context.Movie.FirstOrDefault(m => movie.PreviousPart == m.MovieId);
+
+            ViewData["AwardTypes"] = _context.AwardType.ToList();
+            ViewData["Genres"] = _context.Genre.ToList();
+            ViewData["AwardResults"] = new List<String>{"nominated","won"};
+
+             return View(movie);
         }
 
         // POST: Movie/Edit/5

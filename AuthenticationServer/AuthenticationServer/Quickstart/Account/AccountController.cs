@@ -32,23 +32,17 @@ namespace IdentityServer4.Quickstart.UI
     public class AccountController : Controller
     {
         private readonly UserManager<IdentityUser> _userManager;
-		private readonly IIdentityServerInteractionService _interaction;
-		private readonly IEventService _events;
-		private readonly AccountService _account;
+        private readonly IIdentityServerInteractionService _interaction;
+        private readonly IEventService _events;
+        private readonly AccountService _account;
 
-		public AccountController(
-			IIdentityServerInteractionService interaction,
-			IClientStore clientStore,
-			IHttpContextAccessor httpContextAccessor,
-			IEventService events,
-			UserManager<IdentityUser> userManager)
-		{
-			_userManager = userManager;
-			_interaction = interaction;
-			_events = events;
-			_account = new AccountService(interaction, httpContextAccessor, clientStore);
-
-            // if the TestUserStore is not in DI, then we'll just use the global users collection
+        public AccountController(
+            IIdentityServerInteractionService interaction,
+            IClientStore clientStore,
+            IHttpContextAccessor httpContextAccessor,
+            IEventService events,
+            UserManager<IdentityUser> userManager)  {
+            _userManager = userManager;
             _interaction = interaction;
             _events = events;
             _account = new AccountService(interaction, httpContextAccessor, clientStore);
@@ -166,7 +160,7 @@ namespace IdentityServer4.Quickstart.UI
         /// </summary>
         [HttpGet]
         public async Task<IActionResult> ExternalLoginCallback(string returnUrl) {
-            var info = await HttpContext.Authentication.GetAuthenticateInfoAsync(IdentityServer4.IdentityServerConstants.ExternalCookieAuthenticationScheme);
+            var info = await HttpContext.Authentication.GetAuthenticateInfoAsync(IdentityServerConstants.ExternalCookieAuthenticationScheme);
             var tempUser = info?.Principal;
             if (tempUser == null) {
                 throw new Exception("External authentication error");

@@ -17,6 +17,9 @@ using Client = IdentityServer4.Models.Client;
 using IdentityResource = IdentityServer4.Models.IdentityResource;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
+using AuthenticationServer.Models;
+using Microsoft.EntityFrameworkCore.Storage;
+using Microsoft.Extensions.Options;
 
 namespace AuthenticationServer
 {
@@ -37,12 +40,12 @@ namespace AuthenticationServer
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
 			services.AddSingleton(Configuration);
+
+            services.AddAuthentication();
 			//services.AddTransient<IdentitySeedData>();
 
 //			services.AddDbContext<authenticationDbContext>();
-//
 //            services.AddDbContext<fletnixContext>();
 //
 //			//services.AddDbContext<FLETNIXContext>(options =>
@@ -59,26 +62,31 @@ namespace AuthenticationServer
 
 			services.AddMvc();
 
-//			var migrationsAssembly = typeof(Startup).GetTypeInfo().Assembly.GetName().Name;
-//
-//			services.AddIdentityServer()
-//			   .AddOperationalStore(
-//				   builder => builder.UseSqlServer(@"Server=tcp:fletnixivobrands.database.windows.net,1433;Initial Catalog=fletnixAuthentication;Persist Security Info=False;User ID=Ivobrands;Password=Ivob1995;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;", options => options.MigrationsAssembly(migrationsAssembly)))
-//			   //.AddInMemoryClients(Clients.Get())
-//			   //.AddInMemoryIdentityResources(Resources.GetIdentityResources())
-//			   //.AddInMemoryApiResources(Resources.GetApiResources())
-//			   .AddConfigurationStore(
-//					builder => builder.UseSqlServer(", options => options.MigrationsAssembly(migrationsAssembly)))
-//			   //.AddTestUsers(Users.Get())
-//			   .AddAspNetIdentity<IdentityUser>()
-//			   .AddTemporarySigningCredential();
-            
+            var migrationsAssembly = typeof(Startup).GetTypeInfo().Assembly.GetName().Name;
 			services.AddIdentityServer()
-                .AddInMemoryClients(Clients.Get())
-                .AddInMemoryIdentityResources(Resources.GetIdentityResources())
-                .AddInMemoryApiResources(Resources.GetApiResources())
-                .AddTestUsers(Users.Get())
-                .AddTemporarySigningCredential();
+			   .AddOperationalStore(
+				   builder => builder.UseSqlServer(Configuration["Database:FletnixAuth"], options => options.MigrationsAssembly(migrationsAssembly)))
+			   //.AddInMemoryClients(Clients.Get())
+			   //.AddInMemoryIdentityResources(Resources.GetIdentityResources())
+			   //.AddInMemoryApiResources(Resources.GetApiResources())
+			   .AddConfigurationStore(
+					builder => builder.UseSqlServer(Configuration["Database:FletnixAuth"], options => options.MigrationsAssembly(migrationsAssembly)))
+			   //.AddTestUsers(Users.Get())
+			   .AddAspNetIdentity<IdentityUser>()
+			   .AddTemporarySigningCredential();
+
+            services.AddDbContext<ApplicationDbContext>(options =>
+                options.UseSqlServer(Configuration["Database:FletnixAuth"]));
+            services.AddIdentity<IdentityUser, IdentityRole>
+                ()
+                .AddEntityFrameworkStores<ApplicationDbContext>();
+
+//			services.AddIdentityServer()
+//                .AddInMemoryClients(Clients.Get())
+//                .AddInMemoryIdentityResources(Resources.GetIdentityResources())
+//                .AddInMemoryApiResources(Resources.GetApiResources())
+//                .AddTestUsers(Users.Get())
+//                .AddTemporarySigningCredential();
             
             // Add framework services.
             services.AddMvc();
@@ -104,7 +112,7 @@ namespace AuthenticationServer
 
             app.UseIdentityServer();
 
-           // app.UseIdentity();
+            app.UseIdentity();
 
             app.UseMvcWithDefaultRoute();
 

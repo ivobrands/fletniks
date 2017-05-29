@@ -18,11 +18,18 @@ namespace fletnix.Controllers.Api
             _repsitory = repository;
         }
 
-        [HttpGet("api/movie/{movieName}")]
-        public JsonResult Get(string movieName)
+        [HttpGet("api/movie/{movieName}/{movieId}")]
+        public JsonResult Get(string movieName, int movieId)
         {
            movieName = Uri.UnescapeDataString(movieName);
-            return Json(_repsitory.GetMoviesByName(movieName));
+           var movieList = _repsitory.GetMoviesByName(movieName, movieId);
+            return Json(movieList);
+        }
+
+        [HttpPost("api/movie/genre/{movieId}")]
+        public int Get(int movieId)
+        {
+            return movieId;
         }
     }
 }

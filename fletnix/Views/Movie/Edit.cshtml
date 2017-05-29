@@ -1,3 +1,6 @@
+@using System.Runtime.InteropServices.ComTypes
+@using fletnix.Models
+@using Microsoft.EntityFrameworkCore.Query.Internal
 @model fletnix.Models.Movie
 
 
@@ -12,14 +15,46 @@
 
 <form asp-action="Edit">
     <div class="form-horizontal">
-        <h4>Movie</h4>
+        <h4>@Html.DisplayFor(model => model.Title)</h4>
         <hr />
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-    <input type="hidden" asp-for="MovieId" />
+        <input type="hidden" asp-for="MovieId" id="movieId" />
         <div class="form-group">
+            <div class="row">
+                <h2>Genre(s) @Model.MovieGenre.Count</h2>
+
+
+                @foreach (var genre in Model.MovieGenre)
+                {
+                    <div class="col-md-1 movie-genre">
+                        <div class="row" style="margin-top: 10px;">
+                            <div class="col-md-12 text-center" style="text-align: center">
+                                @genre.GenreName
+                            </div>
+                        </div>
+                        @*                        <div onclick="removeDirector('@director.Person.Firstname @director.Person.Lastname','@director.PersonId','@director.MovieId')" class="movie-director-delete-box">Remove</div>*@
+                    </div>
+                }
+                <div class="col-md-1">
+                    <div onclick="$('#genreModal').modal('toggle');" style="min-height: 60px; cursor: pointer">
+                        <div class="row">
+                            <div class="col-md-12 text-center">
+                                <i style="font-size: 24px; color: #CCCCCC; padding-top: 20px;" class="fa fa-plus" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <hr></hr>
+
+        <div class="form-group">
+            <h2>Movie Information</h2>
+
             <label asp-for="Title" class="col-md-2 control-label"></label>
             <div class="col-md-10">
-                <input asp-for="Title" class="form-control" />
+                <input asp-for="Title" class="form-control"/>
                 <span asp-validation-for="Title" class="text-danger"></span>
             </div>
         </div>
@@ -54,8 +89,16 @@
         <div class="form-group">
             <label asp-for="PreviousPart" class="control-label col-md-2"></label>
             <div class="col-md-10">
+
                 <select id="select" asp-for="PreviousPart" class="form-control">
-                    <option value="" selected="selected">Select a movie</option>
+                    @if (Model.PreviousPartNavigation != null)
+                    {
+                        <option selected value="@Model.PreviousPartNavigation.MovieId">@("(" + Model.PreviousPartNavigation.PublicationYear + ") " + Model.PreviousPartNavigation.Title)</option>
+                    }
+                    else
+                    {
+                        <option value="" selected="selected">Select a movie</option>
+                    }
                 </select>
                 <span asp-validation-for="PreviousPart" class="text-danger"></span>
             </div>
@@ -74,39 +117,92 @@
                 <span asp-validation-for="Url" class="text-danger"></span>
             </div>
         </div>
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" />
+
+        <hr></hr>
+
+        <div class="row">
+            <h2>Movie Director(s) @Model.MovieDirector.Count</h2>
+
+
+            @foreach (var director in Model.MovieDirector)
+            {
+
+                if (director.Person.Gender == null)
+                {
+                    director.Person.Gender = "M";
+                }
+
+                <div class="col-md-1 movie-director">
+                    <div class="row" style="margin-top: 10px;">
+                        <div class="col-md-12 text-center">
+                            @director.Person.Firstname @director.Person.Lastname<br>Director
+                        </div>
+                    </div>
+
+                    <div onclick="removeDirector('@director.Person.Firstname @director.Person.Lastname','@director.PersonId','@director.MovieId')" class="movie-director-delete-box">Remove</div>
+
+                </div>
+            }
+
+            <div class="col-md-1">
+                <div onclick="$('#directorModal').modal('toggle');" style="min-height: 100px; cursor: pointer">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <i style="font-size: 48px; color: #CCCCCC; padding-top: 50px;" class="fa fa-plus" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
             </div>
+
+        </div>
+    </div>
+    </br>
+    </br>
+    <hr></hr>
+
+    <div class="form-group">
+        <div class="col-md-12">
+            <a class="col-md-2" asp-action="Index">Back to List</a> <input type="submit" value="Save" class="btn btn-default" />
         </div>
     </div>
 </form>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+
 </div>
 
 @section Scripts
 {
     <script type="text/javascript">
+        var movieId = $("#movieId")[0].value;
 
         $("#select").select2({
             ajax: {
                 url: function(params) {
-                    return window.location.protocol + "//" + window.location.host + "/api/movie/" + params.term;
+                    return window.location.protocol +
+                        "//" +
+                        window.location.host +
+                        "/api/movie/" +
+                        params.term +
+                        "/" +
+                        movieId;
                 },
                 dataType: "json",
                 cache: true,
                 delay: 250,
                 allowClear: true,
-                processResults: function (data) {
+                processResults: function(data) {
+                    console.log(data);
                     return {
-                        results: $.map(data, function(obj) {
-                            return {
-                                id: obj.movieId,
-                                text: obj.title
-                            };
-                        })
+                        results: $.map(data,
+                            function(obj) {
+                                if (obj.movieId != movieId) {
+                                    return {
+                                        id: obj.movieId,
+                                        text: obj.title
+                                    };
+                                }
+                            })
                     };
                 }
             },
@@ -114,7 +210,142 @@
             minimumInputLength: 5
         });
     </script>
+
+    <script>
+        function toggleGenres(genreName) {
+            var genreSelected = $("#selected_" + genreName);
+            if (genreSelected.hasClass("hidden")) {
+                genreSelected.removeClass("hidden");
+            } else {
+                genreSelected.addClass("hidden");
+            }
+            return false;
+        }
+    </script>
+    <script>
+        @foreach (var genre in (List<Genre>) ViewData["Genres"])
+        {
+            foreach (var movieGenre in Model.MovieGenre)
+            {
+                var movieGenreName = movieGenre.GenreName;
+                var genreName = genre.GenreName;
+                if (genre.MovieGenre != null)
+                {
+
+                    if (movieGenreName != genreName)
+                    {
+                        <text>
+                            var selectedGenre = $("#selected_@movieGenreName");
+                            selectedGenre.removeClass("hidden");
+                        </text>
+                    }
+                }
+            }
+        }
+    </script>
+    <script>
+        function addGenres() {
+            var selectedGenreList = [];
+            @foreach (var genre in (List<Genre>) ViewData["Genres"])
+            {
+                <text>
+                    if (!$("#selected_@genre.GenreName").hasClass("hidden")) {
+                        selectedGenreList.push('@genre.GenreName');
+                    }
+                </text>
+
+            }
+            $.post(
+                    window.location.protocol + "//" + window.location.host + "/api/movie/genre/" + movieId,
+                    {
+                        genres: selectedGenreList
+                    })
+                .done(function(data) {
+                    console.log(data);
+                });
+        }
+    </script>
 }
+}<div class="modal fade" id="genreModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h3 class="modal-title" id="myGenreModelLabel">Add a Genre</h3>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+
+
+                        <input type="hidden" id="genreMovie" name="MovieId" value="@Model.MovieId"/>
+
+                        @foreach(var genre in (List<Genre>) ViewData["Genres"])
+                        {
+                            <div class="col-md-3">
+                                <div style="padding: 10px; cursor: pointer; text-align: center; width: 95%; background-color: white;">
+                                    <button onclick="toggleGenres('@genre.GenreName');return false" class="btn btn-default" style="width: 150px"><span class="hidden" id="selected_@genre.GenreName">✓</span>@genre.GenreName</button>
+                                </div>
+                            </div>
+                        }
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default " style="color: black; border: 1px solid #CCCCCC; background-color: white;" data-dismiss="modal">Close</button>
+                <button type="button" onClick="addGenres()" class="btn btn-default" data-dismiss="modal" style="color: black;">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="directorModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h3 class="modal-title" id="myModalLabel">Add a director</h3>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+
+                    <form method="post" id="directorForm" action="/api/movie/director">
+                        <input type="hidden" id="castMovie" name="MovieId" value="@Model.MovieId"/>
+                        <div class="col-md-3">
+                            <div style="padding: 10px; text-align: center; width: 95%; background-color: white;">
+                                <img src="~/images/mcast.png" width="100%"/>
+                            </div>
+                        </div>
+
+                        <div class="col-md-9">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p style="color:#CCCCCC">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse scelerisque orci eget erat dignissim suscipit. Ut sagittis mi sed leo dapibus, ut tempor enim fringilla. Quisque auctor et nisi vitae scelerisque. Curabitur feugiat lorem et augue cursus, at finibus mi dictum. Integer vulputate dui id elit venenatis ultricies.</p>
+                                    <br>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label">Person</label>
+                                        <div class="col-md-10">
+                                            <select class="form-control personSearch" style="width: 100%;" ></select>
+                                            <span class="text-danger"></span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default fletnix-btn " style="color: black; border: 1px solid #CCCCCC; background-color: white;" data-dismiss="modal">Close</button>
+                <button type="button" onClick="addDirector()" class="btn btn-default fletnix-btn fletnix-red-background" style="color: white;">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 </body>
 </html>

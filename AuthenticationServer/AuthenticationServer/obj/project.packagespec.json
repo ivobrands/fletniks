@@ -74,6 +74,10 @@
           "target": "Package",
           "version": "1.1.1"
         },
+        "Microsoft.AspNetCore.Authentication.Cookies": {
+          "target": "Package",
+          "version": "1.1.2"
+        },
         "Microsoft.Extensions.Logging.Debug": {
           "target": "Package",
           "version": "1.1.1"

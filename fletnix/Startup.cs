@@ -65,11 +65,29 @@ namespace fletnix
                 AuthenticationScheme = "cookie"
             });
 
-            app.UseOpenIdConnectAuthentication(new OpenIdConnectOptions {
-                ClientId = "Fletnix",
+            app.UseOpenIdConnectAuthentication(new OpenIdConnectOptions
+            {
+
+                AuthenticationScheme = "oidc",
+                SignInScheme = "cookie",
+                Authority = "http://localhost:5002/",
                 RequireHttpsMetadata = false,
-                Authority = "http://localhost:56494/",
-                SignInScheme = "cookie"
+                ClientId = "fletnix",
+                //ResponseType = "code id_token",
+                Scope = { "openid", "profile","role"},
+                GetClaimsFromUserInfoEndpoint = true,
+                AutomaticChallenge = true,
+                AutomaticAuthenticate = true,
+                ResponseType = "id_token",
+                //SaveTokens = true,
+
+                TokenValidationParameters = new TokenValidationParameters
+                {
+                    NameClaimType = JwtClaimTypes.Name,
+                    RoleClaimType = JwtClaimTypes.Role,
+                }
+
+
             });
 
 
