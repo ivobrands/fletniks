@@ -1,0 +1,81 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp1.1</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="IdentityModel" Version="2.8.0">
+    </PackageReference>
+    <PackageReference Include="IdentityServer4" Version="1.5.1">
+    </PackageReference>
+    <PackageReference Include="IdentityServer4.AccessTokenValidation" Version="1.2.0">
+    </PackageReference>
+    <PackageReference Include="IdentityServer4.AspNetIdentity" Version="1.0.1">
+    </PackageReference>
+    <PackageReference Include="IdentityServer4.EntityFramework" Version="1.0.1">
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="1.1.2">
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="1.1.2">
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="1.1.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer.Design" Version="1.1.1" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="1.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore" Version="1.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="1.1.2" />
+    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="1.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="1.1.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink" Version="1.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Taghelpers" Version="1.1.2" />
+    <PackageReference Include="AutoMapper" Version="6.0.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="1.0.0" />
+    <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="1.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Data\Migrations\IdentityServerConfiguration" />
+    <Folder Include="Data\Migrations\IdentityServerMigration" />
+    <Folder Include="Data\Migrations\IdentityServerPersisted" />
+    <Folder Include="Properties\PublishProfiles" />
+    <Folder Include="wwwroot\lib\jquery-validation\build" />
+    <Folder Include="wwwroot\lib\jquery-validation\src\additional" />
+    <Folder Include="wwwroot\lib\jquery-validation\src\localization" />
+    <Folder Include="wwwroot\lib\select2\dist\css" />
+    <Folder Include="wwwroot\lib\select2\dist\js\i18n" />
+    <Folder Include="wwwroot\lib\select2\docs\css" />
+    <Folder Include="wwwroot\lib\select2\docs\images" />
+    <Folder Include="wwwroot\lib\select2\docs\vendor\fonts" />
+    <Folder Include="wwwroot\lib\select2\docs\vendor\images\flags" />
+    <Folder Include="wwwroot\lib\select2\docs\vendor\js" />
+    <Folder Include="wwwroot\lib\select2\docs\_includes\examples" />
+    <Folder Include="wwwroot\lib\select2\docs\_includes\nav" />
+    <Folder Include="wwwroot\lib\select2\docs\_includes\options-old" />
+    <Folder Include="wwwroot\lib\select2\docs\_includes\options\compatibility" />
+    <Folder Include="wwwroot\lib\select2\docs\_includes\options\core" />
+    <Folder Include="wwwroot\lib\select2\docs\_includes\options\data" />
+    <Folder Include="wwwroot\lib\select2\docs\_includes\options\dropdown" />
+    <Folder Include="wwwroot\lib\select2\docs\_includes\options\events" />
+    <Folder Include="wwwroot\lib\select2\docs\_includes\options\selections" />
+    <Folder Include="wwwroot\lib\select2\docs\_layouts" />
+    <Folder Include="wwwroot\lib\select2\docs\_sass\vendor\bootstrap\mixins" />
+    <Folder Include="wwwroot\lib\select2\docs\_sass\vendor\font-awesome" />
+    <Folder Include="wwwroot\lib\select2\src\js\select2\compat" />
+    <Folder Include="wwwroot\lib\select2\src\js\select2\data" />
+    <Folder Include="wwwroot\lib\select2\src\js\select2\dropdown" />
+    <Folder Include="wwwroot\lib\select2\src\js\select2\i18n" />
+    <Folder Include="wwwroot\lib\select2\src\js\select2\selection" />
+    <Folder Include="wwwroot\lib\select2\src\scss\mixins" />
+    <Folder Include="wwwroot\lib\select2\src\scss\theme\classic" />
+    <Folder Include="wwwroot\lib\select2\src\scss\theme\default" />
+    <Folder Include="wwwroot\lib\select2\tests\a11y" />
+    <Folder Include="wwwroot\lib\select2\tests\data" />
+    <Folder Include="wwwroot\lib\select2\tests\dropdown" />
+    <Folder Include="wwwroot\lib\select2\tests\integration" />
+    <Folder Include="wwwroot\lib\select2\tests\options" />
+    <Folder Include="wwwroot\lib\select2\tests\results" />
+    <Folder Include="wwwroot\lib\select2\tests\selection" />
+    <Folder Include="wwwroot\lib\select2\tests\utils" />
+    <Folder Include="wwwroot\lib\select2\tests\vendor" />
+    <Folder Include="wwwroot\lib\select2\vendor" />
+  </ItemGroup>
+</Project>
