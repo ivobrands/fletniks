@@ -16,7 +16,7 @@
         <entry file="file://$PROJECT_DIR$/IdentityServer/Helpers/Clients.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="9" lean-forward="true" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="9" />
+              <caret line="0" column="9" lean-forward="false" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="9" />
               <folding>
                 <marker date="1496234161000" expanded="true" signature="6:128" ph="..." />
                 <marker date="1496234161000" expanded="true" signature="162:1194" ph="{...}" />
@@ -34,8 +34,8 @@
       <file leaf-file-name="Startup.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/IdentityServer/Startup.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="52" column="59" lean-forward="false" selection-start-line="52" selection-start-column="59" selection-end-line="52" selection-end-column="59" />
+            <state relative-caret-position="370">
+              <caret line="66" column="8" lean-forward="false" selection-start-line="66" selection-start-column="8" selection-end-line="66" selection-end-column="8" />
               <folding>
                 <marker date="1495466743000" expanded="true" signature="8:646" ph="..." />
                 <marker date="1495466743000" expanded="true" signature="672:6487" ph="{...}" />
@@ -71,7 +71,7 @@
         <entry file="file://$PROJECT_DIR$/IdentityServer/Program.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
-              <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+              <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
               <folding>
                 <marker date="1496234023000" expanded="true" signature="6:149" ph="..." />
                 <marker date="1496234023000" expanded="true" signature="175:599" ph="{...}" />
@@ -122,7 +122,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/IdentityServer/Quickstart/Account/AccountController.cs" />
-        <option value="$PROJECT_DIR$/IdentityServer/Startup.cs" />
         <option value="$PROJECT_DIR$/IdentityServer/Data/Seeds/IdentitySeedData.cs" />
         <option value="$PROJECT_DIR$/IdentityServer/Helpers/User.cs" />
         <option value="$PROJECT_DIR$/IdentityServer/wwwroot/css/site.css" />
@@ -133,6 +132,7 @@
         <option value="$PROJECT_DIR$/IdentityServer/appsettings.Development.json" />
         <option value="$PROJECT_DIR$/IdentityServer/Program.cs" />
         <option value="$PROJECT_DIR$/IdentityServer/Helpers/Clients.cs" />
+        <option value="$PROJECT_DIR$/IdentityServer/Startup.cs" />
       </list>
     </option>
   </component>
@@ -396,12 +396,12 @@
       <workItem from="1495794931294" duration="1078000" />
       <workItem from="1496055954405" duration="1540000" />
       <workItem from="1496153935510" duration="796000" />
-      <workItem from="1496215946922" duration="3493000" />
+      <workItem from="1496215946922" duration="3549000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21405000" />
+    <option name="totallyTimeSpent" value="21461000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -421,8 +421,8 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Unit Tests" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35180724" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35180724" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Change Signature" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17596567" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1097,7 +1097,7 @@
     <entry file="file://$PROJECT_DIR$/IdentityServer/Program.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+          <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
           <folding>
             <marker date="1496234023000" expanded="true" signature="6:149" ph="..." />
             <marker date="1496234023000" expanded="true" signature="175:599" ph="{...}" />
@@ -1110,7 +1110,7 @@
     <entry file="file://$PROJECT_DIR$/IdentityServer/Helpers/Clients.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="9" lean-forward="true" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="9" />
+          <caret line="0" column="9" lean-forward="false" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="9" />
           <folding>
             <marker date="1496234161000" expanded="true" signature="6:128" ph="..." />
             <marker date="1496234161000" expanded="true" signature="162:1194" ph="{...}" />
@@ -1126,8 +1126,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/IdentityServer/Startup.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="52" column="59" lean-forward="false" selection-start-line="52" selection-start-column="59" selection-end-line="52" selection-end-column="59" />
+        <state relative-caret-position="370">
+          <caret line="66" column="8" lean-forward="false" selection-start-line="66" selection-start-column="8" selection-end-line="66" selection-end-column="8" />
           <folding>
             <marker date="1495466743000" expanded="true" signature="8:646" ph="..." />
             <marker date="1495466743000" expanded="true" signature="672:6487" ph="{...}" />
