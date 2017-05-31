@@ -55,7 +55,7 @@ namespace fletnix
             }
             else
             {
-                app.UseExceptionHandler("/Home/Error");
+				app.UseExceptionHandler("/Home/Error");
             }
 
             app.UseStaticFiles();
@@ -65,8 +65,8 @@ namespace fletnix
                 AuthenticationScheme = "cookie"
             });
 
-            app.UseOpenIdConnectAuthentication(new OpenIdConnectOptions
-            {
+			app.UseOpenIdConnectAuthentication(new OpenIdConnectOptions
+			{
 
                 AuthenticationScheme = "oidc",
                 SignInScheme = "cookie",
@@ -81,14 +81,14 @@ namespace fletnix
                 ResponseType = "id_token",
                 //SaveTokens = true,
 
-                TokenValidationParameters = new TokenValidationParameters
-                {
-                    NameClaimType = JwtClaimTypes.Name,
-                    RoleClaimType = JwtClaimTypes.Role,
-                }
+				TokenValidationParameters = new TokenValidationParameters
+				{
+					NameClaimType = JwtClaimTypes.Name,
+					RoleClaimType = JwtClaimTypes.Role,
+				}
 
 
-            });
+			});
 
 
             app.UseMvc(routes =>

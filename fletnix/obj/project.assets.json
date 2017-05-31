@@ -25302,7 +25302,7 @@
       "projectUniqueName": "/Users/ivobrands/Projects/fletnix/fletnix/fletnix.csproj",
       "projectName": "fletnix",
       "projectPath": "/Users/ivobrands/Projects/fletnix/fletnix/fletnix.csproj",
-      "outputPath": "/Users/ivobrands/Projects/fletnix/fletnix/obj/",
+      "outputPath": "/Users/ivobrands/Projects/fletnix/fletnix/obj",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "netcoreapp1.1"
@@ -25353,10 +25353,12 @@
             "version": "1.1.2"
           },
           "Microsoft.EntityFrameworkCore.Tools": {
+            "suppressParent": "All",
             "target": "Package",
             "version": "1.1.0"
           },
           "Microsoft.EntityFrameworkCore.SqlServer.Design": {
+            "suppressParent": "All",
             "target": "Package",
             "version": "1.1.1"
           },

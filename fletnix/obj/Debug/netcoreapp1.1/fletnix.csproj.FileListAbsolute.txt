@@ -2,9 +2,9 @@
 /Users/ivobrands/Projects/fletnix/fletnix/bin/Debug/netcoreapp1.1/fletnix.runtimeconfig.json
 /Users/ivobrands/Projects/fletnix/fletnix/bin/Debug/netcoreapp1.1/fletnix.runtimeconfig.dev.json
 /Users/ivobrands/Projects/fletnix/fletnix/bin/Debug/netcoreapp1.1/fletnix.dll
-/Users/ivobrands/Projects/fletnix/fletnix/bin/Debug/netcoreapp1.1/fletnix.pdb
 /Users/ivobrands/Projects/fletnix/fletnix/obj/Debug/netcoreapp1.1/fletnix.csprojResolveAssemblyReference.cache
 /Users/ivobrands/Projects/fletnix/fletnix/obj/Debug/netcoreapp1.1/fletnix.AssemblyInfo.cs
 /Users/ivobrands/Projects/fletnix/fletnix/obj/Debug/netcoreapp1.1/fletnix.dll
 /Users/ivobrands/Projects/fletnix/fletnix/obj/Debug/netcoreapp1.1/fletnix.pdb
 /Users/ivobrands/Projects/fletnix/fletnix/obj/Debug/netcoreapp1.1/fletnix.csproj.CoreCompileInputs.cache
+/Users/ivobrands/Projects/fletnix/fletnix/bin/Debug/netcoreapp1.1//fletnix.pdb

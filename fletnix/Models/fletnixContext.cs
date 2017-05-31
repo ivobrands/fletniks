@@ -27,7 +27,7 @@ namespace fletnix.Models
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-            optionsBuilder.UseSqlServer(@"Server=tcp:127.0.0.1,1433;Initial Catalog=fletnix;User ID=sa;Password=test1234!");
+            optionsBuilder.UseSqlServer(@"Server=tcp:fletnixmovieivobrands.database.windows.net,1433;Initial Catalog=fletnixmoviedatabase;User ID=ivobrands;Password=Ivob1995");
         }
 
 
