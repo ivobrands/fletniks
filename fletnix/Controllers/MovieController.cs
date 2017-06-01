@@ -22,6 +22,7 @@ namespace fletnix
         }
 
         // GET: Movie
+        [Authorize(Policy = "admin")]
         public async Task<IActionResult> Index(
             string sortOrder,
             string currentFilter,
@@ -31,6 +32,7 @@ namespace fletnix
 
             ViewData["NameSortParm"] = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
             ViewData["DurationSortParm"] = sortOrder == "duration" ? "duration_desc" : "duration";
+            ViewData["PublicationYearSortParm"] = sortOrder == "publicationYear" ? "publicationYear_desc" : "duration";
 
             ViewData["CurrentSort"] = sortOrder;
 
@@ -52,6 +54,12 @@ namespace fletnix
                 case "duration_desc":
                     movie = movie.OrderByDescending(m => m.Duration);
                     break;
+                case "publicationYear":
+                    movie = movie.OrderBy(m => m.PublicationYear);
+                    break;
+                case "publicationYear_desc":
+                    movie = movie.OrderByDescending(m => m.PublicationYear);
+                    break;
                 default:
                     movie = movie.OrderBy(m => m.Title);
                     break;
@@ -72,6 +80,7 @@ namespace fletnix
         }
 
         // GET: Movie/Details/5
+        [Authorize(Policy = "admin")]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -91,6 +100,7 @@ namespace fletnix
         }
 
         // GET: Movie/Create
+        [Authorize(Policy = "admin")]
         public IActionResult Create()
         {
             ViewData["PreviousPart"] = new SelectList(_context.Movie, "MovieId", "Title");
@@ -115,6 +125,7 @@ namespace fletnix
         }
 
         // GET: Movie/Edit/5
+        [Authorize(Policy = "admin")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -142,6 +153,7 @@ namespace fletnix
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Policy = "admin")]
         public async Task<IActionResult> Edit(int id, [Bind("MovieId,Title,Duration,Description,PublicationYear,CoverImage,PreviousPart,Price,Url")] Movie movie)
         {
             if (id != movie.MovieId)
@@ -174,6 +186,7 @@ namespace fletnix
         }
 
         // GET: Movie/Delete/5
+        [Authorize(Policy = "admin")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -195,6 +208,7 @@ namespace fletnix
         // POST: Movie/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Policy = "admin")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var movie = await _context.Movie.SingleOrDefaultAsync(m => m.MovieId == id);

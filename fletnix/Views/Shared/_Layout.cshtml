@@ -35,8 +35,24 @@
                     <li><a asp-area="" asp-controller="Person" asp-action="Index">Person</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
-
                 </ul>
+                
+                @if (User.Identity.IsAuthenticated)
+                {
+
+                        <div style=" float: right; margin-top: -7px; margin-left: -25px;">
+                            <div class="text-center" style="padding-left: 25px; padding-right: 10px; display: inline-block; color: white; padding-top: 15px;">
+                                <div style="margin-left: 15px;"> @User.Identity.Name </div>
+                            </div>
+                            <div style="display: inline-block;">
+                                <a asp-controller="Home" asp-action="Logout"><button class="btn btn-default">Logout</button></a>
+                            </div>
+                        </div>
+                }
+                @if (!User.Identity.IsAuthenticated)
+                {
+                    <a class="btn btn-default" asp-controller="CustomerMovie" asp-action="index" style="font-weight: 400; font-size: 16px; float: right; border-radius: 5px; padding: 10px 17px 7px 17px;">Sign in</a>
+                }
             </div>
         </div>
     </nav>

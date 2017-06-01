@@ -23,9 +23,6 @@ namespace fletnix.Data.Seeds
 
         public async Task EnsureSeedData()
         {
-
-
-
             foreach (var customer in _context.Customer.ToList())
             {
                 if (await _userManager.FindByEmailAsync(customer.CustomerMailAddress) == null)
@@ -109,11 +106,38 @@ namespace fletnix.Data.Seeds
                     identityUser.Claims.Add(new IdentityUserClaim<string>
                     {
                         ClaimType = claim.Type,
-                        ClaimValue = claim.Value,
+                        ClaimValue = claim.Value
                     });
                 }
 
-                _userManager.CreateAsync(identityUser, "ivobrands").Wait();
+                _userManager.CreateAsync(identityUser, "Ivobrands5!").Wait();
+            }
+            
+            if (await _userManager.FindByEmailAsync("brands33@hotmail.com") == null)
+            {
+                var claims = new List<Claim>
+                {
+                    new Claim(JwtClaimTypes.Email, "brands33@hotmail.com"),
+                    new Claim(JwtClaimTypes.Role, "financial"),
+                    new Claim(JwtClaimTypes.Name, "brands33@hotmail.com")
+                };
+
+                var identityUser = new IdentityUser("brands33@hotmail.com")
+                {
+                    UserName = "brands33@hotmail.com",
+                    Email = "brands33@hotmail.com"
+                };
+
+                foreach (var claim in claims)
+                {
+                    identityUser.Claims.Add(new IdentityUserClaim<string>
+                    {
+                        ClaimType = claim.Type,
+                        ClaimValue = claim.Value
+                    });
+                }
+
+                _userManager.CreateAsync(identityUser, "Ivobrands5!").Wait();
             }
 
 

@@ -20,6 +20,7 @@ using IdentityServer4.Events;
 using IdentityServer4.Extensions;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 
 namespace IdentityServer4.Quickstart.UI
 {
@@ -35,19 +36,22 @@ namespace IdentityServer4.Quickstart.UI
 		private readonly IIdentityServerInteractionService _interaction;
 		private readonly IEventService _events;
 		private readonly AccountService _account;
+		private IConfigurationRoot _config;
 
 		public AccountController(
 			IIdentityServerInteractionService interaction,
 			IClientStore clientStore,
 			IHttpContextAccessor httpContextAccessor,
 			IEventService events,
-			UserManager<IdentityUser> userManager)
+			UserManager<IdentityUser> userManager,
+			IConfigurationRoot config)
 		{
 
 			_userManager = userManager;
 			_interaction = interaction;
 			_events = events;
 			_account = new AccountService(interaction, httpContextAccessor, clientStore);
+			_config = config;
 		}
 
 		/// <summary>
@@ -365,7 +369,7 @@ namespace IdentityServer4.Quickstart.UI
                 Response.Cookies.Delete(cookie);
 			}
 
-			return Redirect("https://fletniks.azurewebsites.net/");
+			return Redirect(_config["RedirectUrl"]);
 
 
 			var vm = await _account.BuildLogoutViewModelAsync(logoutId);

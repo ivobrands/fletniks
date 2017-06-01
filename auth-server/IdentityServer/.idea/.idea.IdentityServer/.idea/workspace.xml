@@ -15,8 +15,8 @@
       <file leaf-file-name="Clients.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/IdentityServer/Helpers/Clients.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="27" column="45" lean-forward="false" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="45" />
+            <state relative-caret-position="512">
+              <caret line="44" column="43" lean-forward="false" selection-start-line="44" selection-start-column="43" selection-end-line="44" selection-end-column="43" />
               <folding>
                 <marker date="1496305287000" expanded="true" signature="8:130" ph="..." />
                 <marker date="1496305287000" expanded="true" signature="164:1895" ph="{...}" />
@@ -33,40 +33,91 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Resources.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/IdentityServer/Helpers/Resources.cs">
+      <file leaf-file-name="AccountController.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/IdentityServer/Quickstart/Account/AccountController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="153">
+              <caret line="368" column="48" lean-forward="false" selection-start-line="368" selection-start-column="48" selection-end-line="368" selection-end-column="48" />
               <folding>
-                <marker date="1495097570000" expanded="true" signature="6:63" ph="..." />
-                <marker date="1495097570000" expanded="true" signature="97:1237" ph="{...}" />
-                <marker date="1495097570000" expanded="true" signature="129:1235" ph="{...}" />
-                <marker date="1495097570000" expanded="true" signature="206:575" ph="{...}" />
-                <marker date="1495097570000" expanded="true" signature="254:564" ph="{...}" />
-                <marker date="1495097570000" expanded="true" signature="437:550" ph="{...}" />
-                <marker date="1495097570000" expanded="true" signature="642:1229" ph="{...}" />
-                <marker date="1495097570000" expanded="true" signature="685:1218" ph="{...}" />
-                <marker date="1495097570000" expanded="true" signature="719:1204" ph="{...}" />
-                <marker date="1495097570000" expanded="true" signature="1057:1186" ph="{...}" />
+                <marker date="1496334844000" expanded="true" signature="0:175" ph="/* Copyright (c) Brock Allen &amp; Dominick Baier. All rights reserved. ... */" />
+                <marker date="1496334844000" expanded="true" signature="184:804" ph="..." />
+                <marker date="1496334844000" expanded="true" signature="845:15506" ph="{...}" />
+                <marker date="1496334844000" expanded="true" signature="849:1267" ph="/// This sample controller implements a typical login/logout/provision workflow for local and external accounts. ... " />
+                <marker date="1496334844000" expanded="true" signature="1331:15504" ph="{...}" />
+                <marker date="1496334844000" expanded="true" signature="1834:2028" ph="{...}" />
+                <marker date="1496334844000" expanded="true" signature="2032:2084" ph="/// Show login page ... " />
+                <marker date="1496334844000" expanded="true" signature="2155:2395" ph="{...}" />
+                <marker date="1496334844000" expanded="true" signature="2255:2370" ph="{...}" />
+                <marker date="1496334844000" expanded="true" signature="2540:3731" ph="{...}" />
+                <marker date="1496334844000" expanded="true" signature="2571:3646" ph="{...}" />
+                <marker date="1496334844000" expanded="true" signature="2753:3462" ph="{...}" />
+                <marker date="1496334844000" expanded="true" signature="2871:3059" ph="{...}" />
+                <marker date="1496334844000" expanded="true" signature="2928:3051" ph="{...}" />
+                <marker date="1496334844000" expanded="true" signature="3373:3427" ph="{...}" />
+                <marker date="1496334844000" expanded="true" signature="3765:5992" ph="/* Handle postback from username/password login ... */" />
+                <marker date="1496334844000" expanded="true" signature="5996:6087" ph="/// initiate roundtrip to external authentication provider ... " />
+                <marker date="1496334844000" expanded="true" signature="6183:7987" ph="{...}" />
+                <marker date="1496334844000" expanded="true" signature="6466:7736" ph="{...}" />
+                <marker date="1496334844000" expanded="true" signature="6619:7521" ph="{...}" />
+                <marker date="1496334844000" expanded="true" signature="7097:7322" ph="{...}" />
+                <marker date="1496334844000" expanded="true" signature="7530:7731" ph="{...}" />
+                <marker date="1496334844000" expanded="true" signature="7744:7983" ph="{...}" />
+                <marker date="1496334844000" expanded="true" signature="7851:7928" ph="{...}" />
+                <marker date="1496334844000" expanded="true" signature="8113:10140" ph="{...}" />
+                <marker date="1496334844000" expanded="true" signature="8326:8394" ph="{...}" />
+                <marker date="1496334844000" expanded="true" signature="8548:8641" ph="{...}" />
+                <marker date="1496334844000" expanded="true" signature="8669:8722" ph="{...}" />
+                <marker date="1496334844000" expanded="true" signature="8931:9144" ph="{...}" />
+                <marker date="1496334844000" expanded="true" signature="9287:9370" ph="{...}" />
+                <marker date="1496334844000" expanded="true" signature="9499:9651" ph="{...}" />
+                <marker date="1496334844000" expanded="true" signature="10067:10109" ph="{...}" />
+                <marker date="1496334844000" expanded="true" signature="10174:13839" ph="/* Post processing of external authentication ... */" />
+                <marker date="1496334844000" expanded="true" signature="13843:13896" ph="/// Show logout page ... " />
+                <marker date="1496334844000" expanded="true" signature="14008:14396" ph="{...}" />
+                <marker date="1496334844000" expanded="true" signature="14094:14153" ph="{...}" />
+                <marker date="1496334844000" expanded="true" signature="14302:14371" ph="{...}" />
+                <marker date="1496334844000" expanded="true" signature="14400:14464" ph="/// Handle logout page postback ... " />
+                <marker date="1496334844000" expanded="true" signature="14572:15501" ph="{...}" />
+                <marker date="1496334844000" expanded="true" signature="14683:15180" ph="{...}" />
+                <marker date="1496334844000" expanded="true" signature="14767:14984" ph="{...}" />
+                <marker date="1496334844000" expanded="true" signature="15080:15092" ph="{...}" />
+                <marker date="1496334844000" expanded="true" signature="15163:15175" ph="{...}" />
+                <marker date="1496334844000" expanded="true" signature="15358:15463" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="User.cs" pinned="false" current-in-tab="false">
+      <file leaf-file-name="User.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/IdentityServer/Helpers/User.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="9" lean-forward="false" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+            <state relative-caret-position="152">
+              <caret line="15" column="34" lean-forward="false" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
               <folding>
-                <marker date="1495466743000" expanded="true" signature="6:112" ph="..." />
-                <marker date="1495466743000" expanded="true" signature="146:778" ph="{...}" />
-                <marker date="1495466743000" expanded="true" signature="174:776" ph="{...}" />
-                <marker date="1495466743000" expanded="true" signature="219:770" ph="{...}" />
-                <marker date="1495466743000" expanded="true" signature="259:759" ph="{...}" />
-                <marker date="1495466743000" expanded="true" signature="290:745" ph="{...}" />
-                <marker date="1495466743000" expanded="true" signature="496:727" ph="{...}" />
+                <marker date="1496323756000" expanded="true" signature="6:112" ph="..." />
+                <marker date="1496323756000" expanded="true" signature="146:1278" ph="{...}" />
+                <marker date="1496323756000" expanded="true" signature="174:1276" ph="{...}" />
+                <marker date="1496323756000" expanded="true" signature="219:1270" ph="{...}" />
+                <marker date="1496323756000" expanded="true" signature="259:1259" ph="{...}" />
+                <marker date="1496323756000" expanded="true" signature="290:745" ph="{...}" />
+                <marker date="1496323756000" expanded="true" signature="496:727" ph="{...}" />
+                <marker date="1496323756000" expanded="true" signature="776:1245" ph="{...}" />
+                <marker date="1496323756000" expanded="true" signature="982:1227" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="appsettings.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/IdentityServer/appsettings.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="52" lean-forward="false" selection-start-line="11" selection-start-column="52" selection-end-line="11" selection-end-column="52" />
+              <folding>
+                <marker date="1496334835000" expanded="true" signature="0:764" ph="{...}" />
+                <marker date="1496334835000" expanded="true" signature="15:99" ph="{...}" />
+                <marker date="1496334835000" expanded="true" signature="61:95" ph="{...}" />
+                <marker date="1496334835000" expanded="true" signature="115:665" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -75,8 +126,8 @@
       <file leaf-file-name="Startup.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/IdentityServer/Startup.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-209">
-              <caret line="121" column="28" lean-forward="false" selection-start-line="121" selection-start-column="28" selection-end-line="121" selection-end-column="28" />
+            <state relative-caret-position="2481">
+              <caret line="178" column="39" lean-forward="false" selection-start-line="178" selection-start-column="39" selection-end-line="178" selection-end-column="39" />
               <folding>
                 <marker date="1496248780000" expanded="true" signature="8:646" ph="..." />
                 <marker date="1496248780000" expanded="true" signature="672:6487" ph="{...}" />
@@ -108,61 +159,50 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IdentitySeedData.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="appsettings.Development.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/IdentityServer/appsettings.Development.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="40" lean-forward="false" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
+              <folding>
+                <marker date="1496334877000" expanded="true" signature="0:827" ph="{...}" />
+                <marker date="1496334877000" expanded="true" signature="15:162" ph="{...}" />
+                <marker date="1496334877000" expanded="true" signature="61:158" ph="{...}" />
+                <marker date="1496334877000" expanded="true" signature="178:728" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IdentitySeedData.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/IdentityServer/Data/Seeds/IdentitySeedData.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="106" column="45" lean-forward="true" selection-start-line="106" selection-start-column="45" selection-end-line="106" selection-end-column="45" />
+            <state relative-caret-position="225">
+              <caret line="120" column="60" lean-forward="false" selection-start-line="120" selection-start-column="51" selection-end-line="120" selection-end-column="60" />
               <folding>
-                <marker date="1496323526000" expanded="false" signature="8:282" ph="..." />
-                <marker date="1496323526000" expanded="true" signature="312:3834" ph="{...}" />
-                <marker date="1496323526000" expanded="true" signature="348:3832" ph="{...}" />
-                <marker date="1496323526000" expanded="true" signature="547:639" ph="{...}" />
-                <marker date="1496323526000" expanded="true" signature="683:3826" ph="{...}" />
-                <marker date="1496323526000" expanded="true" signature="761:2857" ph="{...}" />
-                <marker date="1496323526000" expanded="true" signature="870:2843" ph="{...}" />
-                <marker date="1496323526000" expanded="true" signature="960:1220" ph="{...}" />
-                <marker date="1496323526000" expanded="true" signature="1301:1414" ph="{...}" />
-                <marker date="1496323526000" expanded="true" signature="1466:1747" ph="{...}" />
-                <marker date="1496323526000" expanded="true" signature="1591:1723" ph="{...}" />
-                <marker date="1496323526000" expanded="true" signature="1852:2513" ph="/* var user = new IdentityUser() ... */" />
-                <marker date="1496323526000" expanded="true" signature="2535:2824" ph="/* user.Roles.Add(new IdentityUserRole&lt;string&gt;() ... */" />
-                <marker date="1496323526000" expanded="true" signature="2941:3814" ph="{...}" />
-                <marker date="1496323526000" expanded="true" signature="3017:3240" ph="{...}" />
-                <marker date="1496323526000" expanded="true" signature="3332:3421" ph="{...}" />
-                <marker date="1496323526000" expanded="true" signature="3469:3723" ph="{...}" />
-                <marker date="1496323526000" expanded="true" signature="3582:3703" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Program.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/IdentityServer/Program.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="10" column="5" lean-forward="false" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-              <folding>
-                <marker date="1496305177000" expanded="true" signature="6:149" ph="..." />
-                <marker date="1496305177000" expanded="true" signature="175:599" ph="{...}" />
-                <marker date="1496305177000" expanded="true" signature="202:597" ph="{...}" />
-                <marker date="1496305177000" expanded="true" signature="255:591" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ApplicationDbContext.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/IdentityServer/Models/ApplicationDbContext.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="9" lean-forward="false" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
-              <folding>
-                <marker date="1496248780000" expanded="true" signature="6:135" ph="..." />
-                <marker date="1496248780000" expanded="true" signature="168:996" ph="{...}" />
-                <marker date="1496248780000" expanded="true" signature="243:994" ph="{...}" />
-                <marker date="1496248780000" expanded="true" signature="524:574" ph="{...}" />
-                <marker date="1496248780000" expanded="true" signature="661:983" ph="{...}" />
+                <marker date="1496332075000" expanded="false" signature="8:282" ph="..." />
+                <marker date="1496332075000" expanded="true" signature="312:4853" ph="{...}" />
+                <marker date="1496332075000" expanded="true" signature="348:4851" ph="{...}" />
+                <marker date="1496332075000" expanded="true" signature="547:639" ph="{...}" />
+                <marker date="1496332075000" expanded="true" signature="683:4845" ph="{...}" />
+                <marker date="1496332075000" expanded="true" signature="758:2854" ph="{...}" />
+                <marker date="1496332075000" expanded="true" signature="867:2840" ph="{...}" />
+                <marker date="1496332075000" expanded="true" signature="957:1217" ph="{...}" />
+                <marker date="1496332075000" expanded="true" signature="1298:1411" ph="{...}" />
+                <marker date="1496332075000" expanded="true" signature="1463:1744" ph="{...}" />
+                <marker date="1496332075000" expanded="true" signature="1588:1720" ph="{...}" />
+                <marker date="1496332075000" expanded="true" signature="1849:2510" ph="/* var user = new IdentityUser() ... */" />
+                <marker date="1496332075000" expanded="true" signature="2532:2821" ph="/* user.Roles.Add(new IdentityUserRole&lt;string&gt;() ... */" />
+                <marker date="1496332075000" expanded="true" signature="2938:3812" ph="{...}" />
+                <marker date="1496332075000" expanded="true" signature="3014:3237" ph="{...}" />
+                <marker date="1496332075000" expanded="true" signature="3329:3418" ph="{...}" />
+                <marker date="1496332075000" expanded="true" signature="3466:3719" ph="{...}" />
+                <marker date="1496332075000" expanded="true" signature="3579:3699" ph="{...}" />
+                <marker date="1496332075000" expanded="true" signature="3910:4833" ph="{...}" />
+                <marker date="1496332075000" expanded="true" signature="3986:4219" ph="{...}" />
+                <marker date="1496332075000" expanded="true" signature="4314:4439" ph="{...}" />
+                <marker date="1496332075000" expanded="true" signature="4487:4740" ph="{...}" />
+                <marker date="1496332075000" expanded="true" signature="4600:4720" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -207,19 +247,19 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/IdentityServer/Quickstart/Account/AccountController.cs" />
-        <option value="$PROJECT_DIR$/IdentityServer/Helpers/User.cs" />
         <option value="$PROJECT_DIR$/IdentityServer/wwwroot/css/site.css" />
         <option value="$PROJECT_DIR$/IdentityServer/wwwroot/css/site.min.css" />
         <option value="$PROJECT_DIR$/IdentityServer/Views/Shared/_FletnixLayout.cshtml" />
         <option value="$PROJECT_DIR$/IdentityServer/Views/Account/Login.cshtml" />
-        <option value="$PROJECT_DIR$/IdentityServer/appsettings.json" />
         <option value="$PROJECT_DIR$/IdentityServer/Startup.cs" />
         <option value="$PROJECT_DIR$/IdentityServer/Models/ApplicationDbContext.cs" />
-        <option value="$PROJECT_DIR$/IdentityServer/appsettings.Development.json" />
         <option value="$PROJECT_DIR$/IdentityServer/Helpers/Clients.cs" />
         <option value="$PROJECT_DIR$/IdentityServer/Program.cs" />
+        <option value="$PROJECT_DIR$/IdentityServer/Helpers/User.cs" />
         <option value="$PROJECT_DIR$/IdentityServer/Data/Seeds/IdentitySeedData.cs" />
+        <option value="$PROJECT_DIR$/IdentityServer/Quickstart/Account/AccountController.cs" />
+        <option value="$PROJECT_DIR$/IdentityServer/appsettings.json" />
+        <option value="$PROJECT_DIR$/IdentityServer/appsettings.Development.json" />
       </list>
     </option>
   </component>
@@ -230,8 +270,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-40" />
-    <option name="y" value="96" />
+    <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="838" />
   </component>
@@ -280,51 +319,47 @@
               <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Quickstart" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IdentityServer (1 project)" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IdentityServer" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Quickstart" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Account" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IdentityServer (1 project)" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IdentityServer" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Helpers" />
-              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IdentityServer (1 project)" />
-              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IdentityServer" />
-              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Data" />
-              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Seeds" />
-              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IdentityServer (1 project)" />
-              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IdentityServer" />
-              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Data" />
-              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Migrations" />
               <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
             </PATH_ELEMENT>
           </PATH>
@@ -511,12 +546,12 @@
       <workItem from="1495794931294" duration="1078000" />
       <workItem from="1496055954405" duration="1540000" />
       <workItem from="1496153935510" duration="796000" />
-      <workItem from="1496215946922" duration="11708000" />
+      <workItem from="1496215946922" duration="16480000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29620000" />
+    <option name="totallyTimeSpent" value="34392000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -528,7 +563,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-40" y="96" width="1440" height="838" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="838" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -593,13 +628,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/IdentityServer/Startup.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="22" lean-forward="false" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/IdentityServer/Helpers/Clients.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -661,7 +689,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1496334835000" expanded="true" signature="0:764" ph="{...}" />
+            <marker date="1496334835000" expanded="true" signature="15:99" ph="{...}" />
+            <marker date="1496334835000" expanded="true" signature="61:95" ph="{...}" />
+            <marker date="1496334835000" expanded="true" signature="115:665" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -761,7 +794,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1496334835000" expanded="true" signature="0:764" ph="{...}" />
+            <marker date="1496334835000" expanded="true" signature="15:99" ph="{...}" />
+            <marker date="1496334835000" expanded="true" signature="61:95" ph="{...}" />
+            <marker date="1496334835000" expanded="true" signature="115:665" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -861,14 +899,6 @@
             <marker date="1495097570000" expanded="true" signature="379:413" ph="[...]" />
             <marker date="1495097570000" expanded="true" signature="476:533" ph="{...}" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IdentityServer/Quickstart/Account/AccountController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="56" column="63" lean-forward="false" selection-start-line="56" selection-start-column="54" selection-end-line="56" selection-end-column="63" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -988,14 +1018,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/IdentityServer/appsettings.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="10" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/IdentityServer/Views/Account/Login.cshtml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -1062,18 +1084,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/IdentityServer/appsettings.Development.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="271" lean-forward="true" selection-start-line="11" selection-start-column="271" selection-end-line="11" selection-end-column="271" />
-          <folding>
-            <marker date="1496248771000" expanded="true" signature="0:730" ph="{...}" />
-            <marker date="1496248771000" expanded="true" signature="15:162" ph="{...}" />
-            <marker date="1496248771000" expanded="true" signature="61:158" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/IdentityServer/Models/FLETNIXContext.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-531">
@@ -1086,6 +1096,19 @@
             <marker date="1495097570000" expanded="true" signature="678:996" ph="{...}" />
             <marker date="1495097570000" expanded="true" signature="1072:2698" ph="{...}" />
             <marker date="1495097570000" expanded="true" signature="1184:2684" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IdentityServer/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="10" column="5" lean-forward="false" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+          <folding>
+            <marker date="1496305177000" expanded="true" signature="6:149" ph="..." />
+            <marker date="1496305177000" expanded="true" signature="175:599" ph="{...}" />
+            <marker date="1496305177000" expanded="true" signature="202:597" ph="{...}" />
+            <marker date="1496305177000" expanded="true" signature="255:591" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1104,22 +1127,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/IdentityServer/Program.cs">
+    <entry file="file://$USER_HOME$/.local/share/JetBrains/Shared/v08/DecompilerCache/decompiler/AEEB5EC6-8EA1-4F8F-AFC9-70E9CC426EB8/f3/68939d35/UserManager`1.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="10" column="5" lean-forward="false" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-          <folding>
-            <marker date="1496305177000" expanded="true" signature="6:149" ph="..." />
-            <marker date="1496305177000" expanded="true" signature="175:599" ph="{...}" />
-            <marker date="1496305177000" expanded="true" signature="202:597" ph="{...}" />
-            <marker date="1496305177000" expanded="true" signature="255:591" ph="{...}" />
-          </folding>
+        <state relative-caret-position="153">
+          <caret line="474" column="46" lean-forward="false" selection-start-line="474" selection-start-column="46" selection-end-line="474" selection-end-column="46" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/IdentityServer/Helpers/Resources.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="-141">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <marker date="1495097570000" expanded="true" signature="6:63" ph="..." />
@@ -1136,45 +1154,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/IdentityServer/Helpers/Clients.cs">
+    <entry file="file://$PROJECT_DIR$/IdentityServer/Data/Seeds/IdentitySeedData.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="45" lean-forward="false" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="45" />
+        <state relative-caret-position="225">
+          <caret line="120" column="60" lean-forward="false" selection-start-line="120" selection-start-column="51" selection-end-line="120" selection-end-column="60" />
           <folding>
-            <marker date="1496305287000" expanded="true" signature="8:130" ph="..." />
-            <marker date="1496305287000" expanded="true" signature="164:1895" ph="{...}" />
-            <marker date="1496305287000" expanded="true" signature="194:1893" ph="{...}" />
-            <marker date="1496305287000" expanded="true" signature="304:347" ph="{...}" />
-            <marker date="1496305287000" expanded="true" signature="396:1887" ph="{...}" />
-            <marker date="1496305287000" expanded="true" signature="544:1882" ph="{...}" />
-            <marker date="1496305287000" expanded="true" signature="561:1194" ph="{...}" />
-            <marker date="1496305287000" expanded="true" signature="877:1057" ph="{...}" />
-            <marker date="1496305287000" expanded="true" signature="1211:1877" ph="{...}" />
-            <marker date="1496305287000" expanded="true" signature="1538:1718" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IdentityServer/Helpers/User.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="9" lean-forward="false" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
-          <folding>
-            <marker date="1495466743000" expanded="true" signature="6:112" ph="..." />
-            <marker date="1495466743000" expanded="true" signature="146:778" ph="{...}" />
-            <marker date="1495466743000" expanded="true" signature="174:776" ph="{...}" />
-            <marker date="1495466743000" expanded="true" signature="219:770" ph="{...}" />
-            <marker date="1495466743000" expanded="true" signature="259:759" ph="{...}" />
-            <marker date="1495466743000" expanded="true" signature="290:745" ph="{...}" />
-            <marker date="1495466743000" expanded="true" signature="496:727" ph="{...}" />
+            <marker date="1496332075000" expanded="false" signature="8:282" ph="..." />
+            <marker date="1496332075000" expanded="true" signature="312:4853" ph="{...}" />
+            <marker date="1496332075000" expanded="true" signature="348:4851" ph="{...}" />
+            <marker date="1496332075000" expanded="true" signature="547:639" ph="{...}" />
+            <marker date="1496332075000" expanded="true" signature="683:4845" ph="{...}" />
+            <marker date="1496332075000" expanded="true" signature="758:2854" ph="{...}" />
+            <marker date="1496332075000" expanded="true" signature="867:2840" ph="{...}" />
+            <marker date="1496332075000" expanded="true" signature="957:1217" ph="{...}" />
+            <marker date="1496332075000" expanded="true" signature="1298:1411" ph="{...}" />
+            <marker date="1496332075000" expanded="true" signature="1463:1744" ph="{...}" />
+            <marker date="1496332075000" expanded="true" signature="1588:1720" ph="{...}" />
+            <marker date="1496332075000" expanded="true" signature="1849:2510" ph="/* var user = new IdentityUser() ... */" />
+            <marker date="1496332075000" expanded="true" signature="2532:2821" ph="/* user.Roles.Add(new IdentityUserRole&lt;string&gt;() ... */" />
+            <marker date="1496332075000" expanded="true" signature="2938:3812" ph="{...}" />
+            <marker date="1496332075000" expanded="true" signature="3014:3237" ph="{...}" />
+            <marker date="1496332075000" expanded="true" signature="3329:3418" ph="{...}" />
+            <marker date="1496332075000" expanded="true" signature="3466:3719" ph="{...}" />
+            <marker date="1496332075000" expanded="true" signature="3579:3699" ph="{...}" />
+            <marker date="1496332075000" expanded="true" signature="3910:4833" ph="{...}" />
+            <marker date="1496332075000" expanded="true" signature="3986:4219" ph="{...}" />
+            <marker date="1496332075000" expanded="true" signature="4314:4439" ph="{...}" />
+            <marker date="1496332075000" expanded="true" signature="4487:4740" ph="{...}" />
+            <marker date="1496332075000" expanded="true" signature="4600:4720" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/IdentityServer/Startup.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-209">
-          <caret line="121" column="28" lean-forward="false" selection-start-line="121" selection-start-column="28" selection-end-line="121" selection-end-column="28" />
+        <state relative-caret-position="2481">
+          <caret line="178" column="39" lean-forward="false" selection-start-line="178" selection-start-column="39" selection-end-line="178" selection-end-column="39" />
           <folding>
             <marker date="1496248780000" expanded="true" signature="8:646" ph="..." />
             <marker date="1496248780000" expanded="true" signature="672:6487" ph="{...}" />
@@ -1205,29 +1220,118 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/IdentityServer/Data/Seeds/IdentitySeedData.cs">
+    <entry file="file://$PROJECT_DIR$/IdentityServer/Helpers/Clients.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="106" column="45" lean-forward="true" selection-start-line="106" selection-start-column="45" selection-end-line="106" selection-end-column="45" />
+        <state relative-caret-position="512">
+          <caret line="44" column="43" lean-forward="false" selection-start-line="44" selection-start-column="43" selection-end-line="44" selection-end-column="43" />
           <folding>
-            <marker date="1496323526000" expanded="false" signature="8:282" ph="..." />
-            <marker date="1496323526000" expanded="true" signature="312:3834" ph="{...}" />
-            <marker date="1496323526000" expanded="true" signature="348:3832" ph="{...}" />
-            <marker date="1496323526000" expanded="true" signature="547:639" ph="{...}" />
-            <marker date="1496323526000" expanded="true" signature="683:3826" ph="{...}" />
-            <marker date="1496323526000" expanded="true" signature="761:2857" ph="{...}" />
-            <marker date="1496323526000" expanded="true" signature="870:2843" ph="{...}" />
-            <marker date="1496323526000" expanded="true" signature="960:1220" ph="{...}" />
-            <marker date="1496323526000" expanded="true" signature="1301:1414" ph="{...}" />
-            <marker date="1496323526000" expanded="true" signature="1466:1747" ph="{...}" />
-            <marker date="1496323526000" expanded="true" signature="1591:1723" ph="{...}" />
-            <marker date="1496323526000" expanded="true" signature="1852:2513" ph="/* var user = new IdentityUser() ... */" />
-            <marker date="1496323526000" expanded="true" signature="2535:2824" ph="/* user.Roles.Add(new IdentityUserRole&lt;string&gt;() ... */" />
-            <marker date="1496323526000" expanded="true" signature="2941:3814" ph="{...}" />
-            <marker date="1496323526000" expanded="true" signature="3017:3240" ph="{...}" />
-            <marker date="1496323526000" expanded="true" signature="3332:3421" ph="{...}" />
-            <marker date="1496323526000" expanded="true" signature="3469:3723" ph="{...}" />
-            <marker date="1496323526000" expanded="true" signature="3582:3703" ph="{...}" />
+            <marker date="1496305287000" expanded="true" signature="8:130" ph="..." />
+            <marker date="1496305287000" expanded="true" signature="164:1895" ph="{...}" />
+            <marker date="1496305287000" expanded="true" signature="194:1893" ph="{...}" />
+            <marker date="1496305287000" expanded="true" signature="304:347" ph="{...}" />
+            <marker date="1496305287000" expanded="true" signature="396:1887" ph="{...}" />
+            <marker date="1496305287000" expanded="true" signature="544:1882" ph="{...}" />
+            <marker date="1496305287000" expanded="true" signature="561:1194" ph="{...}" />
+            <marker date="1496305287000" expanded="true" signature="877:1057" ph="{...}" />
+            <marker date="1496305287000" expanded="true" signature="1211:1877" ph="{...}" />
+            <marker date="1496305287000" expanded="true" signature="1538:1718" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IdentityServer/Quickstart/Account/AccountController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="368" column="48" lean-forward="false" selection-start-line="368" selection-start-column="48" selection-end-line="368" selection-end-column="48" />
+          <folding>
+            <marker date="1496334844000" expanded="true" signature="0:175" ph="/* Copyright (c) Brock Allen &amp; Dominick Baier. All rights reserved. ... */" />
+            <marker date="1496334844000" expanded="true" signature="184:804" ph="..." />
+            <marker date="1496334844000" expanded="true" signature="845:15506" ph="{...}" />
+            <marker date="1496334844000" expanded="true" signature="849:1267" ph="/// This sample controller implements a typical login/logout/provision workflow for local and external accounts. ... " />
+            <marker date="1496334844000" expanded="true" signature="1331:15504" ph="{...}" />
+            <marker date="1496334844000" expanded="true" signature="1834:2028" ph="{...}" />
+            <marker date="1496334844000" expanded="true" signature="2032:2084" ph="/// Show login page ... " />
+            <marker date="1496334844000" expanded="true" signature="2155:2395" ph="{...}" />
+            <marker date="1496334844000" expanded="true" signature="2255:2370" ph="{...}" />
+            <marker date="1496334844000" expanded="true" signature="2540:3731" ph="{...}" />
+            <marker date="1496334844000" expanded="true" signature="2571:3646" ph="{...}" />
+            <marker date="1496334844000" expanded="true" signature="2753:3462" ph="{...}" />
+            <marker date="1496334844000" expanded="true" signature="2871:3059" ph="{...}" />
+            <marker date="1496334844000" expanded="true" signature="2928:3051" ph="{...}" />
+            <marker date="1496334844000" expanded="true" signature="3373:3427" ph="{...}" />
+            <marker date="1496334844000" expanded="true" signature="3765:5992" ph="/* Handle postback from username/password login ... */" />
+            <marker date="1496334844000" expanded="true" signature="5996:6087" ph="/// initiate roundtrip to external authentication provider ... " />
+            <marker date="1496334844000" expanded="true" signature="6183:7987" ph="{...}" />
+            <marker date="1496334844000" expanded="true" signature="6466:7736" ph="{...}" />
+            <marker date="1496334844000" expanded="true" signature="6619:7521" ph="{...}" />
+            <marker date="1496334844000" expanded="true" signature="7097:7322" ph="{...}" />
+            <marker date="1496334844000" expanded="true" signature="7530:7731" ph="{...}" />
+            <marker date="1496334844000" expanded="true" signature="7744:7983" ph="{...}" />
+            <marker date="1496334844000" expanded="true" signature="7851:7928" ph="{...}" />
+            <marker date="1496334844000" expanded="true" signature="8113:10140" ph="{...}" />
+            <marker date="1496334844000" expanded="true" signature="8326:8394" ph="{...}" />
+            <marker date="1496334844000" expanded="true" signature="8548:8641" ph="{...}" />
+            <marker date="1496334844000" expanded="true" signature="8669:8722" ph="{...}" />
+            <marker date="1496334844000" expanded="true" signature="8931:9144" ph="{...}" />
+            <marker date="1496334844000" expanded="true" signature="9287:9370" ph="{...}" />
+            <marker date="1496334844000" expanded="true" signature="9499:9651" ph="{...}" />
+            <marker date="1496334844000" expanded="true" signature="10067:10109" ph="{...}" />
+            <marker date="1496334844000" expanded="true" signature="10174:13839" ph="/* Post processing of external authentication ... */" />
+            <marker date="1496334844000" expanded="true" signature="13843:13896" ph="/// Show logout page ... " />
+            <marker date="1496334844000" expanded="true" signature="14008:14396" ph="{...}" />
+            <marker date="1496334844000" expanded="true" signature="14094:14153" ph="{...}" />
+            <marker date="1496334844000" expanded="true" signature="14302:14371" ph="{...}" />
+            <marker date="1496334844000" expanded="true" signature="14400:14464" ph="/// Handle logout page postback ... " />
+            <marker date="1496334844000" expanded="true" signature="14572:15501" ph="{...}" />
+            <marker date="1496334844000" expanded="true" signature="14683:15180" ph="{...}" />
+            <marker date="1496334844000" expanded="true" signature="14767:14984" ph="{...}" />
+            <marker date="1496334844000" expanded="true" signature="15080:15092" ph="{...}" />
+            <marker date="1496334844000" expanded="true" signature="15163:15175" ph="{...}" />
+            <marker date="1496334844000" expanded="true" signature="15358:15463" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IdentityServer/appsettings.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="52" lean-forward="false" selection-start-line="11" selection-start-column="52" selection-end-line="11" selection-end-column="52" />
+          <folding>
+            <marker date="1496334835000" expanded="true" signature="0:764" ph="{...}" />
+            <marker date="1496334835000" expanded="true" signature="15:99" ph="{...}" />
+            <marker date="1496334835000" expanded="true" signature="61:95" ph="{...}" />
+            <marker date="1496334835000" expanded="true" signature="115:665" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IdentityServer/appsettings.Development.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="40" lean-forward="false" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
+          <folding>
+            <marker date="1496334877000" expanded="true" signature="0:827" ph="{...}" />
+            <marker date="1496334877000" expanded="true" signature="15:162" ph="{...}" />
+            <marker date="1496334877000" expanded="true" signature="61:158" ph="{...}" />
+            <marker date="1496334877000" expanded="true" signature="178:728" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IdentityServer/Helpers/User.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="15" column="34" lean-forward="false" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
+          <folding>
+            <marker date="1496323756000" expanded="true" signature="6:112" ph="..." />
+            <marker date="1496323756000" expanded="true" signature="146:1278" ph="{...}" />
+            <marker date="1496323756000" expanded="true" signature="174:1276" ph="{...}" />
+            <marker date="1496323756000" expanded="true" signature="219:1270" ph="{...}" />
+            <marker date="1496323756000" expanded="true" signature="259:1259" ph="{...}" />
+            <marker date="1496323756000" expanded="true" signature="290:745" ph="{...}" />
+            <marker date="1496323756000" expanded="true" signature="496:727" ph="{...}" />
+            <marker date="1496323756000" expanded="true" signature="776:1245" ph="{...}" />
+            <marker date="1496323756000" expanded="true" signature="982:1227" ph="{...}" />
           </folding>
         </state>
       </provider>

@@ -1,14 +1,17 @@
 ﻿﻿﻿﻿﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
+    using System.Security.Claims;
+    using System.Threading.Tasks;
 using fletnix.Models;
 using IdentityModel;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
+    using Microsoft.AspNetCore.Http;
+    using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
+    using Microsoft.Extensions.DependencyInjection.Extensions;
+    using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 
 namespace fletnix
@@ -35,9 +38,23 @@ namespace fletnix
 
             services.AddScoped<IMovieRepsitory, MovieRepository>();
             services.AddScoped<IMovieCastRepository, MovieCastRepository>();
+            services.AddSingleton(provider => Configuration);
 
 
             services.AddDbContext<fletnixContext>();
+            
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy("admin", policy =>
+                    policy.RequireClaim(ClaimTypes.Role, "admin"));
+
+                options.AddPolicy("customer", policy =>
+                    policy.RequireClaim(ClaimTypes.Role, "customer","admin"));
+
+                options.AddPolicy("financial", policy =>
+                    policy.RequireClaim(ClaimTypes.Role, "financial","admin"));
+            });
+
 
         }
 

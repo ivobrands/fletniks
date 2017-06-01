@@ -11,15 +11,18 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 
 namespace fletnix.Controllers
 {
     public class HomeController : Controller
     {
+        private IConfigurationRoot _config;
         private readonly fletnixContext _context;
 
-        public HomeController(fletnixContext context) {
+        public HomeController(fletnixContext context, IConfigurationRoot config) {
             _context = context;
+            _config = config;
         }
 
         public IActionResult Index()
@@ -70,6 +73,12 @@ namespace fletnix.Controllers
 //
 //            ViewData["MostPopularMoviesOfLastNDays"] = MostPopularMoviesOfLastNDays;
             return View();
+        }
+        
+        [HttpGet("/Account/AccessDenied")]
+        public async Task<ActionResult> redirectHomePage()
+        {
+            return RedirectToAction("Index", "Home");
         }
 
         public IActionResult About()
@@ -134,5 +143,18 @@ namespace fletnix.Controllers
             return View();
         }
 
+        
+        public async Task<ActionResult> Logout()
+        {
+            if (User.Identity.IsAuthenticated)
+           {
+                await HttpContext.Authentication.SignOutAsync("cookie");
+                var redirectUri = _config["RedirectUrl"];
+               Console.WriteLine(_config["RedirectUrl"]);
+                return Redirect(_config["fletnixAuthenticationServer"]+"/connect/endsession?logoutId=1337&postLogoutRedirectUri="+redirectUri);
+            }
+
+            return RedirectToAction("Index", "Home");
+        }
     }
 }
