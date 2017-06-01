@@ -49,5 +49,29 @@ namespace fletnix.Models
             _context.SaveChanges();
             return true;
         }
+
+        public bool AddMovieCast(MovieCast movieCast)
+        {
+            _context.MovieCast.Add(movieCast);
+            _context.SaveChanges();
+            return true;
+        }
+
+        public bool RemoveDirector(MovieDirector movieDirector)
+        {
+            _context.MovieDirector.Remove(movieDirector);
+            _context.SaveChanges();
+            return true;
+        }
+
+        public bool RemoveMovieCast(MovieCast movieCast)
+        {
+            Console.WriteLine(movieCast.MovieId);
+            Console.WriteLine(movieCast.PersonId);
+            Console.WriteLine(movieCast.Role);
+            _context.MovieCast.Remove(movieCast);
+            _context.SaveChanges();
+            return true;
+        }
     }
 }

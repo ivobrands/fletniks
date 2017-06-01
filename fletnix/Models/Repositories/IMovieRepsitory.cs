@@ -9,5 +9,8 @@ namespace fletnix.Models
              bool UpdateGenre(List<MovieGenre> genres, int movieId);
              object GetPersonByName(string personName);
              bool AddDirector(MovieDirector newDirector);
+             bool AddMovieCast(MovieCast movieCast);
+             bool RemoveDirector(MovieDirector movieDirectorModel);
+             bool RemoveMovieCast(MovieCast movieCast);
          }
 }

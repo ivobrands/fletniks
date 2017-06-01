@@ -109,7 +109,7 @@ namespace fletnix
             {
                 _context.Add(movie);
                 await _context.SaveChangesAsync();
-                return RedirectToAction("Index");
+                return RedirectToAction("Edit", new {id = movie.MovieId});
             }
             ViewData["PreviousPart"] = new SelectList(_context.Movie, "MovieId", "Title", movie.PreviousPart);
             return View(movie);

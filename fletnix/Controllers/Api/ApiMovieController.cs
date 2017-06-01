@@ -51,10 +51,36 @@ namespace fletnix.Controllers.Api
         }
         
         [HttpPost("/api/movie/movieDirector/{movieId}/{personId}")]
-        public bool addDirector(int movieId, int personId)
+        public bool AddDirector(int movieId, int personId)
         {
             var director = new MovieDirector {MovieId = movieId, PersonId = personId};
             return _repsitory.AddDirector(director);
+        }
+        
+        [HttpPost("/api/movie/movieCast/{movieId}/{personId}/{personRole}")]
+        public bool AddMovieCast(int movieId, int personId, string personRole)
+        {
+            var movieCast = new MovieCast {MovieId = movieId, PersonId = personId, Role = personRole};
+            return _repsitory.AddMovieCast(movieCast);
+        }
+        
+        [HttpPost("/api/movie/movieDirector/remove")]
+        public bool RemoveDirector([FromBody]MovieDirectorModel newDirectorModel)
+        {
+            var newDirector = new MovieDirector
+            {
+                MovieId = newDirectorModel.MovieId,
+                PersonId = newDirectorModel.PersonId
+            };
+           
+            return _repsitory.RemoveDirector(newDirector);
+        }
+        
+        [HttpPost("/api/movie/movieCast/remove")]
+        public bool RemoveMovieCast([FromBody]MovieCastModel newMovieCastModel)
+        {
+            var movieCast = new MovieCast {MovieId = newMovieCastModel.MovieId, PersonId = newMovieCastModel.PersonId, Role = newMovieCastModel.Role};
+            return _repsitory.RemoveMovieCast(movieCast);
         }
     }
 }

@@ -365,7 +365,7 @@ namespace IdentityServer4.Quickstart.UI
                 Response.Cookies.Delete(cookie);
 			}
 
-			return Redirect("https://fletniks.azurewebsites.net");
+			return Redirect("https://fletniks.azurewebsites.net/");
 
 
 			var vm = await _account.BuildLogoutViewModelAsync(logoutId);

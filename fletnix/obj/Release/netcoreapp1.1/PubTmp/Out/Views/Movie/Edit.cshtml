@@ -379,17 +379,17 @@
         function addCastMember(personId, personRole) {
             console.log(personId);
             console.log(personRole);
-//            $.ajax
-//            ({
-//                type: "POST",
-//                url: "/api/movie/movieCast/" + movieId + "/" + personId,
-//                beforeSend: (xhr) => { xhr.setRequestHeader('Content-Type', 'application/json') },
-//                dataType: 'json',
-//                async: true,
-//                data: JSON.stringify({ movieId: movieId, personId: personId })
-//            }).done(function( data ) {
-//                window.location.reload();
-//            });
+            $.ajax
+            ({
+                type: "POST",
+                url: "/api/movie/movieCast/" + movieId + "/" + personId + "/" + personRole,
+                beforeSend: (xhr) => { xhr.setRequestHeader('Content-Type', 'application/json') },
+                dataType: 'json',
+                async: true,
+                data: JSON.stringify({ movieId: movieId, personId: personId })
+            }).done(function( data ) {
+                window.location.reload();
+            });
         }
     </script>
 }

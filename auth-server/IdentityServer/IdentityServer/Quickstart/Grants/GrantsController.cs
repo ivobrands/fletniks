@@ -63,7 +63,6 @@ namespace IdentityServer4.Quickstart.UI
                 if (client != null)
                 {
                     var resources = await _resources.FindResourcesByScopeAsync(grant.Scopes);
-
                     var item = new GrantViewModel()
                     {
                         ClientId = client.ClientId,

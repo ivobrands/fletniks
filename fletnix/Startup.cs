@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿﻿﻿﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -68,11 +68,34 @@ namespace fletnix
 			app.UseOpenIdConnectAuthentication(new OpenIdConnectOptions
 			{
 
+				AuthenticationScheme = "oidc",
+				SignInScheme = "cookie",
+				Authority = "https://fletniksauthentication.azurewebsites.net/",
+				RequireHttpsMetadata = !env.IsDevelopment(),
+				ClientId = "fletnix",
+				//ResponseType = "code id_token",
+				Scope = { "openid", "profile", "role" },
+				GetClaimsFromUserInfoEndpoint = true,
+				AutomaticChallenge = true,
+				AutomaticAuthenticate = true,
+				ResponseType = "id_token",
+				//SaveTokens = true,
+
+				TokenValidationParameters = new TokenValidationParameters
+				{
+					NameClaimType = JwtClaimTypes.Name,
+					RoleClaimType = JwtClaimTypes.Role,
+				}
+			});
+
+			app.UseOpenIdConnectAuthentication(new OpenIdConnectOptions
+			{
+                
                 AuthenticationScheme = "oidc",
                 SignInScheme = "cookie",
                 Authority = "http://localhost:5002/",
                 RequireHttpsMetadata = false,
-                ClientId = "fletnix",
+                ClientId = "fletnixDevelopment",
                 //ResponseType = "code id_token",
                 Scope = { "openid", "profile","role"},
                 GetClaimsFromUserInfoEndpoint = true,
