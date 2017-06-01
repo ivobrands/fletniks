@@ -94,7 +94,7 @@ namespace fletnix.Data.Seeds
                 var claims = new List<Claim>
                 {
                     new Claim(JwtClaimTypes.Email, "ivobrands@home.nl"),
-                    new Claim(JwtClaimTypes.Role, "customer"),
+                    new Claim(JwtClaimTypes.Role, "admin"),
                     new Claim(JwtClaimTypes.Name, "ivobrands@home.nl")
                 };
 
@@ -113,7 +113,7 @@ namespace fletnix.Data.Seeds
                     });
                 }
 
-                _userManager.CreateAsync(identityUser, "Welkom123").Wait();
+                _userManager.CreateAsync(identityUser, "ivobrands").Wait();
             }
 
 

@@ -61,7 +61,9 @@
         <div class="form-group">
             <label asp-for="PreviousPart" class="col-md-2 control-label"></label>
             <div class="col-md-10">
-                <select asp-for="PreviousPart" class ="form-control" asp-items="ViewBag.PreviousPart"></select>
+                <select id="select" asp-for="PreviousPart" class="form-control">
+                    <option value="" selected="selected">Select a movie</option>
+                </select>
             </div>
         </div>
         <div class="form-group">
@@ -91,4 +93,43 @@
 </div>
 
 </body>
+
+@section Scripts
+{
+    <script type="text/javascript">
+        var movieId = 0;
+        $("#select").select2({
+            ajax: {
+                url: function(params) {
+                    return window.location.protocol +
+                        "//" +
+                        window.location.host +
+                        "/api/movie/" +
+                        params.term +
+                        "/" +
+                        movieId;
+                },
+                dataType: "json",
+                cache: true,
+                delay: 250,
+                allowClear: true,
+                processResults: function(data) {
+                    return {
+                        results: $.map(data,
+                            function(obj) {
+                                if (obj.movieId != movieId) {
+                                    return {
+                                        id: obj.movieId,
+                                        text: obj.title
+                                    };
+                                }
+                            })
+                    };
+                }
+            },
+            placeholder: "Search a movie",
+            minimumInputLength: 5
+        });
+    </script>
+}
 </html>

@@ -66,10 +66,21 @@ namespace fletnix.Models
 
         public bool RemoveMovieCast(MovieCast movieCast)
         {
-            Console.WriteLine(movieCast.MovieId);
-            Console.WriteLine(movieCast.PersonId);
-            Console.WriteLine(movieCast.Role);
             _context.MovieCast.Remove(movieCast);
+            _context.SaveChanges();
+            return true;
+        }
+
+        public bool AddMovieAward(MovieAward movieAward)
+        {
+            _context.MovieAward.Add(movieAward);
+            _context.SaveChanges();
+            return true;
+        }
+
+        public bool RemoveMovieAward(MovieAward movieAward)
+        {
+            _context.MovieAward.Remove(movieAward);
             _context.SaveChanges();
             return true;
         }

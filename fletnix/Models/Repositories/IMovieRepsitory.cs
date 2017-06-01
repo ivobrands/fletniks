@@ -12,5 +12,7 @@ namespace fletnix.Models
              bool AddMovieCast(MovieCast movieCast);
              bool RemoveDirector(MovieDirector movieDirectorModel);
              bool RemoveMovieCast(MovieCast movieCast);
+             bool AddMovieAward(MovieAward movieAward);
+             bool RemoveMovieAward(MovieAward movieAward);
          }
 }

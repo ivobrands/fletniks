@@ -122,18 +122,6 @@ namespace fletnix.Controllers
         public IActionResult Contact()
         {
 
-            if (User.FindAll("http://schemas.microsoft.com/ws/2008/06/identity/claims/role") == null)
-            {
-                ViewData["Title"] = "admin";
-            }
-            else
-            {
-            }
-            var userRoleClaim = User.FindAll(ClaimTypes.Role);
-            foreach (var userRole in userRoleClaim)
-            {
-                Console.WriteLine(ClaimTypes.Role);
-            }
 
             ViewData["Message"] = null;
 

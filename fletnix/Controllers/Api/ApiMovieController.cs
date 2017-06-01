@@ -82,5 +82,35 @@ namespace fletnix.Controllers.Api
             var movieCast = new MovieCast {MovieId = newMovieCastModel.MovieId, PersonId = newMovieCastModel.PersonId, Role = newMovieCastModel.Role};
             return _repsitory.RemoveMovieCast(movieCast);
         }
+       
+        [HttpPost("/api/movie/movieAward/add")]
+        public bool AddMovieAward([FromBody]MovieAwardModel movieAwardModel)
+        {
+            var movieAward = new MovieAward
+            {
+                MovieId = movieAwardModel.MovieId,
+                PersonId = movieAwardModel.PersonId,
+                Name = movieAwardModel.Name,
+                Type = movieAwardModel.Type,
+                Result = movieAwardModel.Result,
+                Year = movieAwardModel.Year
+            };
+            return _repsitory.AddMovieAward(movieAward);
+        }
+        
+        [HttpPost("/api/movie/movieAward/remove")]
+        public bool RemoveMovieAward([FromBody]MovieAwardModel movieAwardModel)
+        {
+            var movieAward = new MovieAward
+            {
+                MovieId = movieAwardModel.MovieId,
+                PersonId = movieAwardModel.PersonId,
+                Name = movieAwardModel.Name,
+                Type = movieAwardModel.Type,
+                Result = movieAwardModel.Result,
+                Year = movieAwardModel.Year
+            };
+            return _repsitory.RemoveMovieAward(movieAward);
+        }
     }
 }

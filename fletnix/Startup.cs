@@ -67,35 +67,14 @@ namespace fletnix
 
 			app.UseOpenIdConnectAuthentication(new OpenIdConnectOptions
 			{
-
-				AuthenticationScheme = "oidc",
-				SignInScheme = "cookie",
-				Authority = "https://fletniksauthentication.azurewebsites.net/",
-				RequireHttpsMetadata = !env.IsDevelopment(),
-				ClientId = "fletnix",
-				//ResponseType = "code id_token",
-				Scope = { "openid", "profile", "role" },
-				GetClaimsFromUserInfoEndpoint = true,
-				AutomaticChallenge = true,
-				AutomaticAuthenticate = true,
-				ResponseType = "id_token",
-				//SaveTokens = true,
-
-				TokenValidationParameters = new TokenValidationParameters
-				{
-					NameClaimType = JwtClaimTypes.Name,
-					RoleClaimType = JwtClaimTypes.Role,
-				}
-			});
-
-			app.UseOpenIdConnectAuthentication(new OpenIdConnectOptions
-			{
                 
                 AuthenticationScheme = "oidc",
                 SignInScheme = "cookie",
                 Authority = "http://localhost:5002/",
+                //Authority = "https://fletniksauthentication.azurewebsites.net/",
                 RequireHttpsMetadata = false,
                 ClientId = "fletnixDevelopment",
+                //ClientId = "fletnix",
                 //ResponseType = "code id_token",
                 Scope = { "openid", "profile","role"},
                 GetClaimsFromUserInfoEndpoint = true,

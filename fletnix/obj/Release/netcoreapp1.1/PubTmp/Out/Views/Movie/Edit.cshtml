@@ -125,19 +125,17 @@
 
             @foreach (var director in Model.MovieDirector)
             {
-                <div class="col-md-1 movie-director">
+                <div class="col-md-2">
+                <div onclick="removeDirector('@director.PersonId', '@director.MovieId')"><i class="fa fa-times-circle-o" aria-hidden="true"></i></div>
                     <div class="row" style="margin-top: 10px;">
                         <div class="col-md-12 text-center">
-                            @director.Person.Firstname @director.Person.Lastname<br>Director
+                            @director.Person.Firstname @director.Person.Lastname<br><b>Director</b>
                         </div>
                     </div>
-
-                    <div onclick="removeDirector('@director.Person.Firstname @director.Person.Lastname', '@director.PersonId', '@director.MovieId')" class="movie-director-delete-box">Remove</div>
-
                 </div>
             }
 
-            <div class="col-md-1">
+            <div class="col-md-2">
                 <div onclick="$('#directorModal').modal('toggle');" style="min-height: 100px; cursor: pointer">
                     <div class="row">
                         <div class="col-md-12 text-center">
@@ -157,19 +155,17 @@
 
             @foreach (var cast in Model.MovieCast)
             {
-                <div class="col-md-1 movie-director">
+                <div class="col-md-2">
+                    <div onclick="removeCast('@cast.PersonId', '@cast.MovieId', '@cast.Role')"><i class="fa fa-times-circle-o" aria-hidden="true"></i></div>
                     <div class="row" style="margin-top: 10px;">
                         <div class="col-md-12 text-center">
-                            @cast.Person.Firstname @cast.Person.Lastname<br>@cast.Role
+                            @cast.Person.Firstname @cast.Person.Lastname<br><b>@cast.Role</b>
                         </div>
                     </div>
-
-                    <div onclick="removeCast('@cast.Person.Firstname @cast.Person.Lastname', '@cast.PersonId', '@cast.MovieId')">Remove</div>
-
                 </div>
             }
 
-            <div class="col-md-1">
+            <div class="col-md-2">
                 <div onclick="$('#castModal').modal('toggle');" style="min-height: 100px; cursor: pointer">
                     <div class="row">
                         <div class="col-md-12 text-center">
@@ -185,6 +181,40 @@
     </br>
     <hr></hr>
 
+<div class="row">
+    <h2>Movie Awards @Model.MovieAward.Count</h2>
+
+
+    @foreach (var award in Model.MovieAward)
+    {
+        <div class="col-md-2">
+            <div onclick="removeAward('@award.Name', '@award.Year', @award.Type', '@award.MovieId', '@award.PersonId', '@award.Result)"><i class="fa fa-times-circle-o" aria-hidden="true"></i></div>
+            <div class="row" style="margin-top: 10px;">
+                <div class="col-md-12 text-center">
+                    @award.Name @award.Year<br>
+                    @award.Person.Firstname @award.Person.Lastname<br>
+                    <b>@award.Type</b> @award.Result
+                </div>
+            </div>
+        </div>
+    }
+
+    <div class="col-md-2">
+        <div onclick="$('#movieAwardModel').modal('toggle');" style="min-height: 100px; cursor: pointer">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <i style="font-size: 48px; color: #CCCCCC; padding-top: 50px;" class="fa fa-plus" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+</br>
+</br>
+<hr></hr>
+    
     <div class="form-group">
         <div class="col-md-12">
             <a class="col-md-2" asp-action="Index">Back to List</a> <input type="submit" value="Save" class="btn btn-default"/>
@@ -355,7 +385,6 @@
                 async: true,
                 data: JSON.stringify({ genres: selectedGenreList })
             }).done(function( data ) {
-                console.log(data);
                 window.location.reload();
             });
         }
@@ -376,9 +405,22 @@
         }
     </script>
     <script>
+        function removeDirector(personId, movieId) {
+            $.ajax
+            ({
+                type: "POST",
+                url: "/api/movie/movieDirector/remove",
+                beforeSend: (xhr) => { xhr.setRequestHeader('Content-Type', 'application/json') },
+                dataType: 'json',
+                async: true,
+                data: JSON.stringify({ MovieId: movieId, PersonId: personId })
+            }).done(function( data ) {
+                window.location.reload();
+            });
+        }
+    </script>
+    <script>
         function addCastMember(personId, personRole) {
-            console.log(personId);
-            console.log(personRole);
             $.ajax
             ({
                 type: "POST",
@@ -387,6 +429,21 @@
                 dataType: 'json',
                 async: true,
                 data: JSON.stringify({ movieId: movieId, personId: personId })
+            }).done(function( data ) {
+                window.location.reload();
+            });
+        }
+    </script>
+    <script>
+        function removeCast(personId, movieId, personRole) {
+            $.ajax
+            ({
+                type: "POST",
+                url: "/api/movie/movieCast/remove",
+                beforeSend: (xhr) => { xhr.setRequestHeader('Content-Type', 'application/json') },
+                dataType: 'json',
+                async: true,
+                data: JSON.stringify({ movieId: movieId, personId: personId, Role: personRole })
             }).done(function( data ) {
                 window.location.reload();
             });

@@ -38,8 +38,7 @@ namespace fletnix
                 select s;
             if (!String.IsNullOrEmpty(searchString))
             {
-                movie = movie.Where(m => m.Title.Contains(searchString)
-                                               || m.Description.Contains(searchString));
+                movie = movie.Where(m => m.Title.Contains(searchString));
             }
 
             switch (sortOrder)
