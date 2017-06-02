@@ -88,7 +88,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="User.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="User.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/IdentityServer/Helpers/User.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="152">
@@ -112,12 +112,12 @@
         <entry file="file://$PROJECT_DIR$/IdentityServer/appsettings.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
-              <caret line="11" column="52" lean-forward="false" selection-start-line="11" selection-start-column="52" selection-end-line="11" selection-end-column="52" />
+              <caret line="11" column="53" lean-forward="false" selection-start-line="11" selection-start-column="53" selection-end-line="11" selection-end-column="53" />
               <folding>
-                <marker date="1496334835000" expanded="true" signature="0:764" ph="{...}" />
-                <marker date="1496334835000" expanded="true" signature="15:99" ph="{...}" />
-                <marker date="1496334835000" expanded="true" signature="61:95" ph="{...}" />
-                <marker date="1496334835000" expanded="true" signature="115:665" ph="{...}" />
+                <marker date="1496411316000" expanded="true" signature="0:765" ph="{...}" />
+                <marker date="1496411316000" expanded="true" signature="15:99" ph="{...}" />
+                <marker date="1496411316000" expanded="true" signature="61:95" ph="{...}" />
+                <marker date="1496411316000" expanded="true" signature="115:665" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -159,16 +159,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="appsettings.Development.json" pinned="false" current-in-tab="false">
+      <file leaf-file-name="appsettings.Development.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/IdentityServer/appsettings.Development.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="40" lean-forward="false" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
+            <state relative-caret-position="195">
+              <caret line="13" column="28" lean-forward="false" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
               <folding>
-                <marker date="1496334877000" expanded="true" signature="0:827" ph="{...}" />
-                <marker date="1496334877000" expanded="true" signature="15:162" ph="{...}" />
-                <marker date="1496334877000" expanded="true" signature="61:158" ph="{...}" />
-                <marker date="1496334877000" expanded="true" signature="178:728" ph="{...}" />
+                <marker date="1496411393000" expanded="true" signature="0:828" ph="{...}" />
+                <marker date="1496411393000" expanded="true" signature="15:162" ph="{...}" />
+                <marker date="1496411393000" expanded="true" signature="61:158" ph="{...}" />
+                <marker date="1496411393000" expanded="true" signature="178:728" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -212,11 +212,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>signinsc</find>
-      <find>signins</find>
-      <find>signin</find>
-      <find>c</find>
-      <find>cook</find>
       <find>cookie</find>
       <find>loca</find>
       <find>local</find>
@@ -233,15 +228,20 @@
       <find>fletnixAut</find>
       <find>fletnixAuth</find>
       <find>fletnixaut</find>
-      <find>f</find>
       <find>fletni</find>
       <find>fl</find>
       <find>fletn</find>
-      <find>fletnix</find>
       <find>fletnixa</find>
       <find>fletnixau</find>
-      <find>fletnixauth</find>
       <find>a</find>
+      <find>fletnixauth</find>
+      <find>f</find>
+      <find>fletnix</find>
+      <find>fletnix.</find>
+      <find>fletnix.a</find>
+      <find>fletnix.az</find>
+      <find>fletnix.azu</find>
+      <find>fletnix.azure</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -546,12 +546,12 @@
       <workItem from="1495794931294" duration="1078000" />
       <workItem from="1496055954405" duration="1540000" />
       <workItem from="1496153935510" duration="796000" />
-      <workItem from="1496215946922" duration="17211000" />
+      <workItem from="1496215946922" duration="17319000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35123000" />
+    <option name="totallyTimeSpent" value="35231000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -563,16 +563,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="838" extended-state="1" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1440" height="838" extended-state="0" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Errors In Solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31654677" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Unit Tests" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35120642" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36595175" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35120642" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36595175" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Change Signature" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17596567" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -690,10 +689,10 @@
         <state relative-caret-position="180">
           <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding>
-            <marker date="1496334835000" expanded="true" signature="0:764" ph="{...}" />
-            <marker date="1496334835000" expanded="true" signature="15:99" ph="{...}" />
-            <marker date="1496334835000" expanded="true" signature="61:95" ph="{...}" />
-            <marker date="1496334835000" expanded="true" signature="115:665" ph="{...}" />
+            <marker date="1496411316000" expanded="true" signature="0:765" ph="{...}" />
+            <marker date="1496411316000" expanded="true" signature="15:99" ph="{...}" />
+            <marker date="1496411316000" expanded="true" signature="61:95" ph="{...}" />
+            <marker date="1496411316000" expanded="true" signature="115:665" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -795,10 +794,10 @@
         <state relative-caret-position="180">
           <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding>
-            <marker date="1496334835000" expanded="true" signature="0:764" ph="{...}" />
-            <marker date="1496334835000" expanded="true" signature="15:99" ph="{...}" />
-            <marker date="1496334835000" expanded="true" signature="61:95" ph="{...}" />
-            <marker date="1496334835000" expanded="true" signature="115:665" ph="{...}" />
+            <marker date="1496411316000" expanded="true" signature="0:765" ph="{...}" />
+            <marker date="1496411316000" expanded="true" signature="15:99" ph="{...}" />
+            <marker date="1496411316000" expanded="true" signature="61:95" ph="{...}" />
+            <marker date="1496411316000" expanded="true" signature="115:665" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1117,13 +1116,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" column="9" lean-forward="false" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
-          <folding>
-            <marker date="1496248780000" expanded="true" signature="6:135" ph="..." />
-            <marker date="1496248780000" expanded="true" signature="168:996" ph="{...}" />
-            <marker date="1496248780000" expanded="true" signature="243:994" ph="{...}" />
-            <marker date="1496248780000" expanded="true" signature="524:574" ph="{...}" />
-            <marker date="1496248780000" expanded="true" signature="661:983" ph="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1295,25 +1288,12 @@
     <entry file="file://$PROJECT_DIR$/IdentityServer/appsettings.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
-          <caret line="11" column="52" lean-forward="false" selection-start-line="11" selection-start-column="52" selection-end-line="11" selection-end-column="52" />
+          <caret line="11" column="53" lean-forward="false" selection-start-line="11" selection-start-column="53" selection-end-line="11" selection-end-column="53" />
           <folding>
-            <marker date="1496334835000" expanded="true" signature="0:764" ph="{...}" />
-            <marker date="1496334835000" expanded="true" signature="15:99" ph="{...}" />
-            <marker date="1496334835000" expanded="true" signature="61:95" ph="{...}" />
-            <marker date="1496334835000" expanded="true" signature="115:665" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IdentityServer/appsettings.Development.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="40" lean-forward="false" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
-          <folding>
-            <marker date="1496334877000" expanded="true" signature="0:827" ph="{...}" />
-            <marker date="1496334877000" expanded="true" signature="15:162" ph="{...}" />
-            <marker date="1496334877000" expanded="true" signature="61:158" ph="{...}" />
-            <marker date="1496334877000" expanded="true" signature="178:728" ph="{...}" />
+            <marker date="1496411316000" expanded="true" signature="0:765" ph="{...}" />
+            <marker date="1496411316000" expanded="true" signature="15:99" ph="{...}" />
+            <marker date="1496411316000" expanded="true" signature="61:95" ph="{...}" />
+            <marker date="1496411316000" expanded="true" signature="115:665" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1332,6 +1312,19 @@
             <marker date="1496323756000" expanded="true" signature="496:727" ph="{...}" />
             <marker date="1496323756000" expanded="true" signature="776:1245" ph="{...}" />
             <marker date="1496323756000" expanded="true" signature="982:1227" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IdentityServer/appsettings.Development.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="28" lean-forward="false" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+          <folding>
+            <marker date="1496411393000" expanded="true" signature="0:828" ph="{...}" />
+            <marker date="1496411393000" expanded="true" signature="15:162" ph="{...}" />
+            <marker date="1496411393000" expanded="true" signature="61:158" ph="{...}" />
+            <marker date="1496411393000" expanded="true" signature="178:728" ph="{...}" />
           </folding>
         </state>
       </provider>
