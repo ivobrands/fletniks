@@ -20,6 +20,7 @@ namespace fletnix.Models
         public virtual DbSet<MovieGenre> MovieGenre { get; set; }
         public virtual DbSet<Person> Person { get; set; }
         public virtual DbSet<Watchhistory> Watchhistory { get; set; }
+        public virtual DbSet<CustomerFeedback> CustomerFeedback { get; set; }
 
         public fletnixContext( DbContextOptions options) : base(options)
         {
@@ -344,6 +345,31 @@ namespace fletnix.Models
                     .HasForeignKey(d => d.MovieId)
                     .OnDelete(DeleteBehavior.Restrict)
                     .HasConstraintName("FK4_movie_id");
+            });
+            
+            modelBuilder.Entity<CustomerFeedback>(entity =>
+            {
+                modelBuilder.Entity<CustomerFeedback>().ToTable("CustomerFeedback");
+                
+                entity.HasKey(e => new {e.MovieId, e.CustomerMailAddress}).HasName("PK__Customer__5730A27917488F4F");
+
+                entity.Property(e => e.MovieId).HasColumnName("movie_id").HasColumnType("int");
+
+                entity.Property(e => e.CustomerMailAddress)
+                    .HasColumnName("customer_mail_address")
+                    .HasColumnType("varchar(255)");
+                         
+                entity.Property(e => e.Comments)
+                    .HasColumnName("comments")
+                    .HasColumnType("varchar(2056)");
+                
+                entity.Property(e => e.Rating)
+                    .HasColumnName("rating")
+                    .HasColumnType("int");
+                
+                entity.Property(e => e.FeedbackDate)
+                    .HasColumnName("Feedback_Date")
+                    .HasColumnType("datetime");
             });
         }
     }

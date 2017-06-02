@@ -112,5 +112,25 @@ namespace fletnix.Controllers.Api
             };
             return _repsitory.RemoveMovieAward(movieAward);
         }
+        
+        [HttpPost("/api/movie/movieWatch/{movieId}/{price}")]
+        public bool WatchMovie(int movieId, int price)
+        {
+            
+            var hasSeen = _repsitory.HasSeenMovie(User, movieId);
+
+            if (hasSeen != null && (!ModelState.IsValid || hasSeen.CustomerMailAddress == User.Identity.Name)) return false;
+            
+            _repsitory.AddToWatchHistory(new Watchhistory
+            {
+                CustomerMailAddress = User.Identity.Name,
+                Invoiced = true,
+                MovieId = movieId,
+                Price = price,
+                WatchDate = DateTime.Now
+            });
+            
+            return true;
+        }
     }
 }

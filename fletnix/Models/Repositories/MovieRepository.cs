@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using fletnix.ViewModels;
 using Microsoft.EntityFrameworkCore;
 
@@ -83,6 +84,18 @@ namespace fletnix.Models
             _context.MovieAward.Remove(movieAward);
             _context.SaveChanges();
             return true;
+        }
+
+        public bool AddToWatchHistory(Watchhistory watchhistory)
+        {
+            _context.Watchhistory.Add(watchhistory);
+            _context.SaveChanges();
+            return true;
+        }
+
+        public Watchhistory HasSeenMovie(ClaimsPrincipal user, int movieId)
+        {
+            return _context.Watchhistory.Where(r=>r.CustomerMailAddress == user.Identity.Name).FirstOrDefault(r => r.MovieId == movieId);
         }
     }
 }
