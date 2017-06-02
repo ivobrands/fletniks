@@ -11,17 +11,6 @@
     <title>Index</title>
 </head>
 <body>
-<p>
-@{
-    if (User.FindAll(ClaimTypes.Role).ToArray().Length > 0)
-    {
-        if (User.FindAll(ClaimTypes.Role).ToArray()[0].Value == "admin")
-        {
-            <text><a class="btn btn-default" asp-action="Create">Create New</a></text>
-        }
-    }
-}
-</p>
 
 <form asp-action="Index" method="get">
     <div>
@@ -32,71 +21,63 @@
         </p>
     </div>
 </form>
+<div class="col-md-12">
+    <div class="col-md-6">
+        <table class="table" style="display: inline-block;">
+            <thead>
+            <tr>
+                <th>
+                    <a asp-action="Index" asp-route-sortOrder="@ViewData["NameSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Title</a>
+                </th>
+                <th>
+                    <a asp-action="Index" asp-route-sortOrder="@ViewData["DurationSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Duration</a>
+                </th>
+                <th>
+                    Description
+                </th>
+                <th>
+                    <a asp-action="Index" asp-route-sortOrder="@ViewData["PublicationYearSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Year</a>
+                </th>
+                <th>
+                    Price
+                </th>
+            </tr>
+            </thead>
+            <tr>
+            <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Title)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Duration)
+                    </td>
 
-<table class="table">
-    <thead>
-    <tr>
-        <th>
-            <a asp-action="Index" asp-route-sortOrder="@ViewData["NameSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Title</a>
-        </th>
-        <th>
-            <a asp-action="Index" asp-route-sortOrder="@ViewData["DurationSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Duration</a>
-        </th>
-        <th>
-            Description
-        </th>
-        <th>
-            Year
-        </th>
-        <th>
-            Price
-        </th>
-    </tr>
-    </thead>
-    <tr>
-    <tbody>
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Title)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Duration)
-            </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Description)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PublicationYear)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoverImage)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Price)
+                    </td>
+                    <td>
+                        <a asp-action="Details" asp-route-id="@item.MovieId">Details</a>
+                    </td>
+                </tr>
+            }
+            </tbody>
+        </table>
 
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PublicationYear)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CoverImage)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Price)
-            </td>
-            <td>
-                <a asp-action="Details" asp-route-id="@item.MovieId">Details</a>
+    </div>    
+</div>
 
-                @{
-                    if (User.FindAll(ClaimTypes.Role).ToArray().Length > 0)
-                    {
-                        if (User.FindAll(ClaimTypes.Role).ToArray()[0].Value == "admin")
-                        {
-                            <text>| <a asp-action="Edit" asp-route-id="@item.MovieId">Edit</a> |
-                            <a asp-action="Delete" asp-route-id="@item.MovieId">Delete</a></text>
-                        }
-                    }
-                }
-
-                
-            </td>
-        </tr>
-    }
-    </tbody>
-</table>
 
 @{
     var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";

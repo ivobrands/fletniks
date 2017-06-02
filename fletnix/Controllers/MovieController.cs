@@ -32,7 +32,7 @@ namespace fletnix
 
             ViewData["NameSortParm"] = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
             ViewData["DurationSortParm"] = sortOrder == "duration" ? "duration_desc" : "duration";
-            ViewData["PublicationYearSortParm"] = sortOrder == "publicationYear" ? "publicationYear_desc" : "duration";
+            ViewData["PublicationYearSortParm"] = sortOrder == "publicationYear" ? "publicationYear_desc" : "publicationYear";
 
             ViewData["CurrentSort"] = sortOrder;
 
@@ -75,7 +75,7 @@ namespace fletnix
             }
 
 
-            int pageSize = 25;
+            int pageSize = 15;
             return View(await PaginatedList<Movie>.CreateAsync(movie.AsNoTracking(), page ?? 1, pageSize));
         }
 
@@ -112,6 +112,7 @@ namespace fletnix
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Policy = "admin")]
         public async Task<IActionResult> Create([Bind("MovieId,Title,Duration,Description,PublicationYear,CoverImage,PreviousPart,Price,Url")] Movie movie)
         {
             if (ModelState.IsValid)

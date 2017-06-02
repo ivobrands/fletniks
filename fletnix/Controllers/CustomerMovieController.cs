@@ -22,7 +22,7 @@ namespace fletnix
         }
 
         // GET: Movie
-        [Authorize(Policy = "customer")]
+        //[Authorize(Policy = "customer")]
         public async Task<IActionResult> Index(
             string sortOrder,
             string currentFilter,
@@ -32,6 +32,7 @@ namespace fletnix
 
             ViewData["NameSortParm"] = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
             ViewData["DurationSortParm"] = sortOrder == "duration" ? "duration_desc" : "duration";
+            ViewData["PublicationYearSortParm"] = sortOrder == "publicationYear" ? "publicationYear_desc" : "publicationYear";
 
             ViewData["CurrentSort"] = sortOrder;
 
@@ -53,6 +54,12 @@ namespace fletnix
                 case "duration_desc":
                     movie = movie.OrderByDescending(m => m.Duration);
                     break;
+                case "publicationYear":
+                    movie = movie.OrderBy(m => m.PublicationYear);
+                    break;
+                case "publicationYear_desc":
+                    movie = movie.OrderByDescending(m => m.PublicationYear);
+                    break;
                 default:
                     movie = movie.OrderBy(m => m.Title);
                     break;
@@ -72,8 +79,9 @@ namespace fletnix
             return View(await PaginatedList<Movie>.CreateAsync(movie.AsNoTracking(), page ?? 1, pageSize));
         }
 
+
         // GET: Movie/Details/5
-        [Authorize(Policy = "admin")]
+        [Authorize(Policy = "customer")]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)

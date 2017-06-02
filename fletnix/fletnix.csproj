@@ -42,9 +42,7 @@
   <ItemGroup>
     <Folder Include="Models\" />
     <Folder Include="Services" />
-    <Folder Include="Views\Genre" />
     <Folder Include="Views\Movie" />
-    <Folder Include="Views\MovieAward" />
     <Folder Include="Views\Person" />
     <Folder Include="wwwroot\fonts\" />
     <Folder Include="ViewModels\" />
