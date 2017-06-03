@@ -359,8 +359,8 @@ namespace fletnix.Models
                     .HasColumnName("customer_mail_address")
                     .HasColumnType("varchar(255)");
                          
-                entity.Property(e => e.Comments)
-                    .HasColumnName("comments")
+                entity.Property(e => e.Comment)
+                    .HasColumnName("comment")
                     .HasColumnType("varchar(2056)");
                 
                 entity.Property(e => e.Rating)

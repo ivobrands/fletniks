@@ -8,7 +8,7 @@ namespace fletnix.Models
         public string CustomerMailAddress { get; set; }
         public DateTime FeedbackDate { get; set; }
         public int Rating { get; set; }
-        public string Comments { get; set; }
+        public string Comment { get; set; }
        
         public virtual Customer CustomerMailAddressNavigation { get; set; }
         public virtual Movie Movie { get; set; }

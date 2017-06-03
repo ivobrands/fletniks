@@ -1,0 +1,155 @@
+@using fletnix.Models
+@model fletnix.Models.Movie
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+</head>
+<body> 
+
+<div class="row">
+    <h4> @Html.DisplayFor(model => model.Title) <br><button onclick="watchMovie()" class="btn btn-default" style="float: right;">Watch Movie!</button>
+        Genre: @foreach (var genre in Model.MovieGenre) {@genre.GenreName <text>&nbsp;</text>} </h4>
+    <hr />
+    <div class="col-md-6">
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Title)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Title)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Duration)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Duration) minutes
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Description)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Description)
+            </dd>
+            <dt>
+                Publication Year
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.PublicationYear)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Price)
+            </dt>
+            <dd>
+                € @Html.DisplayFor(model => model.Price)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Url)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Url)
+            </dd>
+            <dt>
+                Previous Part
+            </dt>
+            <dd> 
+                <a href="/CustomerMovie/Details/@Html.DisplayFor(model => model.PreviousPartNavigation.MovieId)">@Html.DisplayFor(model => model.PreviousPartNavigation.Title)</a>
+            </dd>
+        </dl>  
+    </div>
+    <div class="col-md-6">
+        <dt>
+            Cover Image
+        </dt>
+        <dd>
+            Coming soon
+        </dd>
+    </div>
+</div>
+<div class="row">
+    <h2>Movie Director(s) @Model.MovieDirector.Count</h2>
+
+
+    @foreach (var director in Model.MovieDirector)
+    {
+        <div class="col-md-2">
+            <div class="row" style="margin-top: 10px;">
+                <div class="col-md-12 text-center">
+                    @director.Person.Firstname @director.Person.Lastname<br><b>Director</b>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+        
+<hr></hr>
+        
+<div class="row">
+    <h2>Movie cast @Model.MovieCast.Count</h2>
+
+
+    @foreach (var cast in Model.MovieCast)
+    {
+        <div class="col-md-2">
+            <div class="row" style="margin-top: 10px;">
+                <div class="col-md-12 text-center">
+                    @cast.Person.Firstname @cast.Person.Lastname<br><b>@cast.Role</b>
+                </div>
+            </div>
+        </div>
+    }
+
+</div>
+</br>
+<hr></hr>
+
+<div class="row">
+    <h2>Movie Awards @Model.MovieAward.Count</h2>
+
+
+    @foreach (var award in Model.MovieAward)
+    {
+        <div class="col-md-2">
+            <div class="row" style="margin-top: 10px;">
+                <div class="col-md-12 text-center">
+                    @award.Name @award.Year<br><hr style="margin: 3px;">
+                    @award.Person.Firstname @award.Person.Lastname<br><hr style="margin: 3px;">
+                    <b>@award.Type</b><hr style="margin: 3px;"> @award.Result
+                </div>
+            </div>
+        </div>
+    }
+</div>
+</br>
+<hr></hr>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    <script>
+        function watchMovie() {
+            var movieId = @Model.MovieId;
+            var price = @Model.Price;
+            console.log("gekeken");
+            $.ajax
+            ({
+                type: "POST",
+                url: "/api/movie/movieWatch/" + movieId + "/" + price,
+                beforeSend: (xhr) => { xhr.setRequestHeader('Content-Type', 'application/json') },
+                dataType: 'json',
+                async: true
+            }).done(function( data ) {
+                if (data == true)
+                    window.location.replace("/customerMovie");
+                else alert("already seen");
+            });
+        }
+    </script>
+}
+</body>
+</html>

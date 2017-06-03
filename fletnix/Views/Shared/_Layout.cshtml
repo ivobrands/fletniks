@@ -38,6 +38,11 @@
                             if (User.FindAll(ClaimTypes.Role).ToArray()[0].Value == "admin")
                             {
                                 <li><a asp-area="" asp-controller="Movie" asp-action="Index">Movie</a></li>
+                                <li><a asp-area="" asp-controller="CustomerMovie" asp-action="Index">Customer Movie</a></li>
+                            }
+                            else
+                            {
+                                <li><a asp-area="" asp-controller="CustomerMovie" asp-action="Index">Movie</a></li> 
                             }
                         }
                         else
@@ -47,7 +52,15 @@
                     }
                     <li><a asp-area="" asp-controller="Person" asp-action="Index">Person</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
+                    @{
+                        if (User.FindAll(ClaimTypes.Role).ToArray().Length > 0)
+                        {
+                            if (User.FindAll(ClaimTypes.Role).ToArray()[0].Value == "admin" || User.FindAll(ClaimTypes.Role).ToArray()[0].Value == "customer")
+                            {
+                                <li><a asp-area="" asp-controller="watchHistory" asp-action="Index">History</a></li>
+                            }
+                        }
+                    }
                 </ul>
                 
                 @if (User.Identity.IsAuthenticated)

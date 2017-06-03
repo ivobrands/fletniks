@@ -56,5 +56,7 @@
     <Folder Include="wwwroot\lib\components-font-awesome\fonts" />
     <Folder Include="wwwroot\lib\components-font-awesome\less" />
     <Folder Include="wwwroot\lib\components-font-awesome\scss" />
+    <Folder Include="wwwroot\lib\jquery-bar-rating\dist\themes" />
+    <Folder Include="wwwroot\lib\jquery-bar-rating\themes" />
   </ItemGroup>
 </Project>

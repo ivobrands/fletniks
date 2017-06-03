@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿using System;
+﻿﻿﻿﻿﻿﻿using System;
 using System.Collections.Generic;
 using System.Linq;
     using System.Security.Claims;
@@ -38,6 +38,8 @@ namespace fletnix
 
             services.AddScoped<IMovieRepsitory, MovieRepository>();
             services.AddScoped<IMovieCastRepository, MovieCastRepository>();
+            services.AddScoped<ICustomerFeedbackRepository, CustomerFeedbackRepository>();
+
             services.AddSingleton(provider => Configuration);
 
 
