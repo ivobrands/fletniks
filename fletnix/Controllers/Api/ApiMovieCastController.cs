@@ -1,11 +1,12 @@
 ﻿using System;
 using fletnix.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace fletnix.Controllers.Api
 
 {
-
+    [Authorize]
     public class ApiMovieCastController: Controller
     {
         private IMovieCastRepository _repsitory;

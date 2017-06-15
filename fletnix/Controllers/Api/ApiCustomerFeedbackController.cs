@@ -1,10 +1,12 @@
 using System;
 using fletnix.Models;
 using fletnix.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace fletnix.Controllers.Api
 {
+    [Authorize]
     public class ApiCustomerFeedbackController: Controller
     {
         private ICustomerFeedbackRepository _repsitory;

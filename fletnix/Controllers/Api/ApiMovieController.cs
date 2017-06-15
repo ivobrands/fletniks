@@ -6,12 +6,13 @@ using fletnix.Models;
 using Microsoft.AspNetCore.Mvc;
 using fletnix.Models;
 using fletnix.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Newtonsoft.Json;
 
 namespace fletnix.Controllers.Api
 
 {
-
+    [Authorize]
     public class ApiMovieController: Controller
     {
         private IMovieRepsitory _repsitory;

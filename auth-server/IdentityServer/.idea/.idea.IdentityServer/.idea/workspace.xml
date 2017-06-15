@@ -88,7 +88,7 @@
       <file leaf-file-name="Startup.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/IdentityServer/Startup.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
+            <state relative-caret-position="2071">
               <caret line="178" column="39" lean-forward="false" selection-start-line="178" selection-start-column="39" selection-end-line="178" selection-end-column="39" />
               <folding>
                 <marker date="1496248780000" expanded="true" signature="8:646" ph="..." />
@@ -505,12 +505,12 @@
       <workItem from="1496215946922" duration="17621000" />
       <workItem from="1496488330107" duration="5859000" />
       <workItem from="1497349370074" duration="1234000" />
-      <workItem from="1497517692930" duration="3997000" />
+      <workItem from="1497517692930" duration="4271000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46623000" />
+    <option name="totallyTimeSpent" value="46897000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1034,7 +1034,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/IdentityServer/Startup.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
+        <state relative-caret-position="2071">
           <caret line="178" column="39" lean-forward="false" selection-start-line="178" selection-start-column="39" selection-end-line="178" selection-end-column="39" />
           <folding>
             <marker date="1496248780000" expanded="true" signature="8:646" ph="..." />
