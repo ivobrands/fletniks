@@ -106,6 +106,14 @@
           "target": "Package",
           "version": "1.1.0"
         },
+        "Microsoft.Extensions.Caching.Redis.Core": {
+          "target": "Package",
+          "version": "1.0.1"
+        },
+        "Microsoft.AspNetCore.Session": {
+          "target": "Package",
+          "version": "1.0.1"
+        },
         "AutoMapper": {
           "target": "Package",
           "version": "6.0.2"

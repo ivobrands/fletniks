@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -11,20 +12,24 @@ using fletnix.ViewModels;
 using IdentityServer4.Extensions;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using Microsoft.Extensions.Caching.Distributed;
+using Newtonsoft.Json;
 
 namespace fletnix
 {
     public class CustomerMovieController : Controller
     {
         private readonly fletnixContext _context;
-
-        public CustomerMovieController(fletnixContext context)
+        private readonly IDistributedCache _cache;
+        
+        public CustomerMovieController(fletnixContext context, IDistributedCache cache)
         {
             _context = context;
+            _cache = cache;
         }
 
         // GET: Movie
-        //[Authorize(Policy = "customer")]
+        [Authorize]
         public async Task<IActionResult> Index(
             string sortOrder,
             string currentFilter,
@@ -33,6 +38,19 @@ namespace fletnix
         {
             if (currentFilter.IsNullOrEmpty() && searchString.IsNullOrEmpty() && sortOrder.IsNullOrEmpty())
             {
+                var options = new DistributedCacheEntryOptions().SetSlidingExpiration(TimeSpan.FromSeconds(14400));
+                
+                var mostPopularOfAllTime = _cache.GetString("MostPopularOfAllTime");
+                var mostPopularMoviesOfLastTwoWeeks = _cache.GetString("MostPopularMoviesOfLastTwoWeeks");
+                if (mostPopularOfAllTime != null && mostPopularMoviesOfLastTwoWeeks != null)
+                {
+                    ViewData["MostPopularMoviesOfLastTwoWeeks"] =
+                        JsonConvert.DeserializeObject<List<PopularMoviesViewModel>>(mostPopularMoviesOfLastTwoWeeks);
+                    ViewData["MostPopularOfAllTime"] =
+                        JsonConvert.DeserializeObject<List<PopularMoviesViewModel>>(mostPopularOfAllTime);
+                    return View();
+                }
+                
                 Task Task1 = Task.Factory.StartNew(() =>
                 {
                     Console.WriteLine("start all time weeks");
@@ -75,6 +93,8 @@ namespace fletnix
                 });
 
                 Task.WaitAll(Task1, Task2);
+                _cache.SetString("MostPopularMoviesOfLastTwoWeeks", JsonConvert.SerializeObject(ViewData["MostPopularMoviesOfLastTwoWeeks"]),options);
+                _cache.SetString("MostPopularOfAllTime", JsonConvert.SerializeObject(ViewData["MostPopularOfAllTime"]),options);
                 return View();
             }
 

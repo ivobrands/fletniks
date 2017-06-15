@@ -1,0 +1,99 @@
+@using fletnix.ViewModels
+
+@{
+    ViewBag.Title = "Awards";
+    Layout = "_Layout";
+}
+
+<h2>Awards</h2>
+
+<div class="row">
+    <div class="col-md-6">
+        <h1>@ViewData["header"]</h1>
+    </div>
+    <div class="col-md-6">
+        <div class="row">
+            <form method="get" action="/Report/Awards" style="margin-top: 20px;">
+                <div class="col-md-4" style="margin-top: -22px;">
+                    <label>From</label>
+                    <select class="form-control yearSelectorFrom" name="startYear"></select>
+                </div>
+                <div class="col-md-4" style="margin-top: -22px;">
+                    <label>Till</label>
+                    <select class="yearSelectorTill form-control" name="endYear"></select>
+                </div>
+                <div class="col-md-4">
+                    <button type="submit" class="btn btn-default">Generate</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<hr>
+@{
+    var report =  ViewData["report"];
+    var dict = (Dictionary<int, AwardReportViewModel>) ViewData["dict"];
+}
+<div class="row">
+
+    @foreach(var movie in dict)
+    {
+        <div class="col-md-3">
+            Movie Title: @movie.Value.Movie.Title <br>   
+        </div>
+        <div class="col-md-5">
+            @if (movie.Value.MovieAwardList != null)
+            {
+                foreach(var award in movie.Value.MovieAwardList)
+                {
+                    <text>Award name: </text>@award.Name  <text> |</text> 
+                    <text>Award type: </text>@award.Type <br>
+                }
+            }
+        </div>
+        <div class="col-md-3">
+            <text>Won count: </text>@movie.Value.WonCount <br>
+            <text>Nomination count: </text>@movie.Value.NominationCount
+        </div>
+        <div class="col-md-12">
+            <hr>
+        </div>
+    }
+
+    
+</div>
+
+@{
+    var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
+    var nextDisabled = !Model.HasNextPage ? "disabled" : "";
+}
+
+<a asp-action="Awards"
+   asp-route-page="@(Model.PageIndex - 1)"
+   asp-route-startYear="@ViewData["start"]"
+   asp-route-endYear="@ViewData["end"]"
+   class="btn btn-default @prevDisabled">
+    Previous
+</a>
+<a asp-action="Awards"
+   asp-route-page="@(Model.PageIndex + 1)"
+   asp-route-startYear="@ViewData["start"]"
+   asp-route-endYear="@ViewData["end"]"
+   class="btn btn-default @nextDisabled">
+    Next
+</a>
+
+@section scripts {
+
+    <script>
+        for (i = new Date().getFullYear()+1; i > 1920; i--) {
+            var isSelectedFrom = '';
+            if (@ViewData["start"] == i) isSelectedFrom = 'selected'; 
+            $('.yearSelectorFrom').append($('<option '+isSelectedFrom+' />').val(i).html(i));
+            
+            var isSelectedTill = '';
+            if (@ViewData["end"] == i) isSelectedTill = 'selected'; 
+            $('.yearSelectorTill').append($('<option '+isSelectedTill+' />').val(i).html(i));
+        }
+    </script>
+}

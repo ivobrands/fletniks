@@ -6,9 +6,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using fletnix.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace fletnix
 {
+    [Authorize(Policy = "admin")]
     public class PersonController : Controller
     {
         private readonly fletnixContext _context;

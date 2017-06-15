@@ -18,70 +18,71 @@
     </environment>
 </head>
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">fletnix</a>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-                    @{
-                        if (User.FindAll(ClaimTypes.Role).ToArray().Length > 0)
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">fletnix</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                @{
+                    if (User.FindAll(ClaimTypes.Role).ToArray().Length > 0)
+                    {
+                        if (User.FindAll(ClaimTypes.Role).ToArray()[0].Value == "admin")
                         {
-                            if (User.FindAll(ClaimTypes.Role).ToArray()[0].Value == "admin")
-                            {
-                                <li><a asp-area="" asp-controller="Movie" asp-action="Index">Movie</a></li>
-                                <li><a asp-area="" asp-controller="CustomerMovie" asp-action="Index">Customer Movie</a></li>
-                            }
-                            else
-                            {
-                                <li><a asp-area="" asp-controller="CustomerMovie" asp-action="Index">Movie</a></li> 
-                            }
+                            <li><a asp-area="" asp-controller="Movie" asp-action="Index">Movie</a></li>
+                            <li><a asp-area="" asp-controller="CustomerMovie" asp-action="Index">Customer Movie</a></li>
                         }
                         else
                         {
-                            <li><a asp-area="" asp-controller="CustomerMovie" asp-action="Index">Movie</a></li>
+                            <li><a asp-area="" asp-controller="CustomerMovie" asp-action="Index">Movie</a></li> 
                         }
                     }
-                    <li><a asp-area="" asp-controller="Person" asp-action="Index">Person</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
-                    @{
-                        if (User.FindAll(ClaimTypes.Role).ToArray().Length > 0)
+                    else
+                    {
+                        <li><a asp-area="" asp-controller="CustomerMovie" asp-action="Index">Movie</a></li>
+                    }
+                }
+                <li><a asp-area="" asp-controller="Person" asp-action="Index">Person</a></li>
+                <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
+                @{
+                    if (User.FindAll(ClaimTypes.Role).ToArray().Length > 0)
+                    {
+                        if (User.FindAll(ClaimTypes.Role).ToArray()[0].Value == "admin" || User.FindAll(ClaimTypes.Role).ToArray()[0].Value == "customer")
                         {
-                            if (User.FindAll(ClaimTypes.Role).ToArray()[0].Value == "admin" || User.FindAll(ClaimTypes.Role).ToArray()[0].Value == "customer")
-                            {
-                                <li><a asp-area="" asp-controller="watchHistory" asp-action="Index">History</a></li>
-                            }
+                            <li><a asp-area="" asp-controller="watchHistory" asp-action="Index">History</a></li>
                         }
                     }
-                </ul>
+                }
+            </ul>
                 
-                @if (User.Identity.IsAuthenticated)
-                {
+            @if (User.Identity.IsAuthenticated)
+            {
 
-                        <div style=" float: right; margin-top: -7px; margin-left: -25px;">
-                            <div class="text-center" style="padding-left: 25px; padding-right: 10px; display: inline-block; color: white; padding-top: 15px;">
-                                <div style="margin-left: 15px;"> @User.Identity.Name </div>
-                            </div>
-                            <div style="display: inline-block;">
-                                <a asp-controller="Home" asp-action="Logout"><button class="btn btn-default">Logout</button></a>
-                            </div>
-                        </div>
-                }
-                @if (!User.Identity.IsAuthenticated)
-                {
-                    <a class="btn btn-default" asp-controller="CustomerMovie" asp-action="index" style="font-weight: 400; font-size: 16px; float: right; border-radius: 5px; padding: 10px 17px 7px 17px;">Sign in</a>
-                }
-            </div>
+                <div style=" float: right; margin-top: -7px; margin-left: -25px;">
+                    <div class="text-center" style="padding-left: 25px; padding-right: 10px; display: inline-block; color: white; padding-top: 15px;">
+                        <div style="margin-left: 15px;"> @User.Identity.Name </div>
+                    </div>
+                    <div style="display: inline-block;">
+                        <a asp-controller="Home" asp-action="Logout"><button class="btn btn-default">Logout</button></a>
+                    </div>
+                </div>
+            }
+            @if (!User.Identity.IsAuthenticated)
+            {
+                <a class="btn btn-default" asp-controller="CustomerMovie" asp-action="index" style="font-weight: 400; font-size: 16px; float: right; border-radius: 5px; padding: 10px 17px 7px 17px;">Sign in</a>
+            }
         </div>
-    </nav>
+    </div>
+</nav>
+<span id="CRFSAuthentication" hidden>@Html.AntiForgeryToken()</span>
     <div class="container body-content">
         @RenderBody()
         <hr />

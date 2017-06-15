@@ -42,6 +42,13 @@ namespace fletnix
 
             services.AddSingleton(provider => Configuration);
 
+            services.AddDistributedRedisCache(options =>
+            {
+                options.InstanceName = "rediscache";
+                options.Configuration = "13.81.213.106:6379,password=Y3IxavvW61lPp/RkbjdleoBk5kwET453cKd7Ru7XOZc=,ssl=false,abortConnect=False";
+            });
+
+            services.AddSession();
 
             services.AddDbContext<fletnixContext>();
             
@@ -53,8 +60,8 @@ namespace fletnix
                 options.AddPolicy("customer", policy =>
                     policy.RequireClaim(ClaimTypes.Role, "customer","admin"));
 
-                options.AddPolicy("financial", policy =>
-                    policy.RequireClaim(ClaimTypes.Role, "financial","admin"));
+                options.AddPolicy("Financial", policy =>
+                    policy.RequireClaim(ClaimTypes.Role, "Financial","admin"));
             });
 
 
@@ -63,7 +70,20 @@ namespace fletnix
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
-        {
+        {          
+            app.Use(async (context, next) =>
+            {
+                context.Response.Headers.Add("X-Frame-Options", "SAMEORIGIN");
+                context.Response.Headers.Add("X-XSS-Protection", "1; mode=block");
+                context.Response.Headers.Add("X-Content-Type-Options", "nosniff");
+                context.Response.Headers.Add("Strict-Transport-Security", "max-age=31536000; includeSubDomains");
+                
+                // Do work that doesn't write to the Response.
+                await next.Invoke();
+                // Do logging or other work that doesn't write to the Response.
+            });
+            
+            
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
 
@@ -81,7 +101,8 @@ namespace fletnix
 
             app.UseCookieAuthentication(new CookieAuthenticationOptions
             {
-                AuthenticationScheme = "cookie"
+                AuthenticationScheme = "cookie",
+                CookieHttpOnly = true
             });
 
 			app.UseOpenIdConnectAuthentication(new OpenIdConnectOptions
@@ -112,6 +133,8 @@ namespace fletnix
 			});
 
 
+            app.UseSession();
+            
             app.UseMvc(routes =>
             {
                 routes.MapRoute(

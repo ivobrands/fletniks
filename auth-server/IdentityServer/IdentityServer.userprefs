@@ -1,18 +1,10 @@
 ﻿<Properties StartupConfiguration="{F2CE2B61-4543-494E-BBA9-9FB05702BB32}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="IdentityServer/obj/Release/netcoreapp1.1/PubTmp/Out/appsettings.Development.json">
+  <MonoDevelop.Ide.Workbench ActiveDocument="IdentityServer/appsettings.json">
     <Files>
-      <File FileName="IdentityServer/Startup.cs" Line="1" Column="1" />
+      <File FileName="IdentityServer/Startup.cs" Line="98" Column="14" />
       <File FileName="IdentityServer/Helpers/Clients.cs" Line="22" Column="27" />
-      <File FileName="IdentityServer/Quickstart/Account/AccountController.cs" Line="368" Column="5" />
-      <File FileName="IdentityServer/Program.cs" Line="1" Column="1" />
-      <File FileName="IdentityServer/Views/Home/Index.cshtml" Line="1" Column="1" />
-      <File FileName="IdentityServer/Views/Account/Login.cshtml" Line="1" Column="1" />
-      <File FileName="IdentityServer/Views/Shared/_FletnixLayout.cshtml" Line="37" Column="1" />
-      <File FileName="IdentityServer/Views/Shared/_Layout.cshtml" Line="1" Column="1" />
-      <File FileName="IdentityServer/Views/Account/Logout.cshtml" Line="1" Column="1" />
-      <File FileName="IdentityServer/appsettings.Development.json" Line="18" Column="1" />
-      <File FileName="IdentityServer/appsettings.json" Line="12" Column="35" />
-      <File FileName="IdentityServer/obj/Release/netcoreapp1.1/PubTmp/Out/appsettings.Development.json" Line="18" Column="1" />
+      <File FileName="IdentityServer/appsettings.Development.json" Line="1" Column="1" />
+      <File FileName="IdentityServer/appsettings.json" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.IdentityServer PreferredExecutionTarget="MonoDevelop.Default" />

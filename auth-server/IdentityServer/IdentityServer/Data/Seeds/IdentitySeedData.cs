@@ -140,7 +140,32 @@ namespace fletnix.Data.Seeds
                 _userManager.CreateAsync(identityUser, "Ivobrands5!").Wait();
             }
 
+            if (await _userManager.FindByEmailAsync("ivo@ivobrands.nl") == null)
+            {
+                var claims = new List<Claim>
+                {
+                    new Claim(JwtClaimTypes.Email, "ivo@ivobrands.nl"),
+                    new Claim(JwtClaimTypes.Role, "CEO"),
+                    new Claim(JwtClaimTypes.Name, "ivo@ivobrands.nl")
+                };
 
+                var identityUser = new IdentityUser("ivo@ivobrands.nl")
+                {
+                    UserName = "ivo@ivobrands.nl",
+                    Email = "ivo@ivobrands.nl"
+                };
+
+                foreach (var claim in claims)
+                {
+                    identityUser.Claims.Add(new IdentityUserClaim<string>
+                    {
+                        ClaimType = claim.Type,
+                        ClaimValue = claim.Value
+                    });
+                }
+
+                _userManager.CreateAsync(identityUser, "Ivobrands5!").Wait();
+            }
         }
     }
 }

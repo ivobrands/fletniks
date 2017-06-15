@@ -27,6 +27,16 @@ namespace IdentityServer.Helpers
                         new Claim(JwtClaimTypes.Role, "FinancialManager"),
                         new Claim(JwtClaimTypes.Name, "brandsivo")
                     }
+                },
+                new TestUser {
+                    SubjectId = "5BE86359-434B-073C-AD2D-A3932222DABE",
+                    Username = "ivobrandsCEO",
+                    Password = "password",
+                    Claims = new List<Claim> {
+                        new Claim(JwtClaimTypes.Email, "ivo@ivobrands.nl"),
+                        new Claim(JwtClaimTypes.Role, "CEO"),
+                        new Claim(JwtClaimTypes.Name, "brandsivo")
+                    }
                 }
             };
         }
