@@ -18,57 +18,81 @@
     </environment>
 </head>
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">fletnix</a>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-                    @{
-                        if (User.FindAll(ClaimTypes.Role).ToArray().Length > 0)
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">fletnix</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                @{
+                    if (User.FindAll(ClaimTypes.Role).ToArray().Length > 0)
+                    {
+                        if (User.FindAll(ClaimTypes.Role).ToArray()[0].Value == "admin")
                         {
-                            if (User.FindAll(ClaimTypes.Role).ToArray()[0].Value == "admin")
-                            {
-                                <li><a asp-area="" asp-controller="Movie" asp-action="Index">Movie</a></li>
-                            }
+                            <li><a asp-area="" asp-controller="Movie" asp-action="Index">Movie</a></li>
+                            <li><a asp-area="" asp-controller="CustomerMovie" asp-action="Index">Customer Movie</a></li>
                         }
                         else
                         {
-                            <li><a asp-area="" asp-controller="CustomerMovie" asp-action="Index">Movie</a></li>
+                            <li><a asp-area="" asp-controller="CustomerMovie" asp-action="Index">Movie</a></li> 
                         }
                     }
-                    <li><a asp-area="" asp-controller="Person" asp-action="Index">Person</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
-                </ul>
+                    else
+                    {
+                        <li><a asp-area="" asp-controller="CustomerMovie" asp-action="Index">Movie</a></li>
+                    }
+                }
+                <li><a asp-area="" asp-controller="Person" asp-action="Index">Person</a></li>
+                <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
+                @{
+                    if (User.FindAll(ClaimTypes.Role).ToArray().Length > 0)
+                    {
+                        if (User.FindAll(ClaimTypes.Role).ToArray()[0].Value == "admin" || User.FindAll(ClaimTypes.Role).ToArray()[0].Value == "customer")
+                        {
+                            <li><a asp-area="" asp-controller="watchHistory" asp-action="Index">History</a></li>
+                        }
+                    }
+                }
                 
-                @if (User.Identity.IsAuthenticated)
-                {
+                @{
+                    if (User.FindAll(ClaimTypes.Role).ToArray().Length > 0)
+                    {
+                        if (User.FindAll(ClaimTypes.Role).ToArray()[0].Value == "financial" || User.FindAll(ClaimTypes.Role).ToArray()[0].Value == "CEO")
+                        {
+                            <li><a asp-area="" asp-controller="Report" asp-action="Index">Report</a></li>
+                        }
+                    }
+                }
+            </ul>
+                
+            @if (User.Identity.IsAuthenticated)
+            {
 
-                        <div style=" float: right; margin-top: -7px; margin-left: -25px;">
-                            <div class="text-center" style="padding-left: 25px; padding-right: 10px; display: inline-block; color: white; padding-top: 15px;">
-                                <div style="margin-left: 15px;"> @User.Identity.Name </div>
-                            </div>
-                            <div style="display: inline-block;">
-                                <a asp-controller="Home" asp-action="Logout"><button class="btn btn-default">Logout</button></a>
-                            </div>
-                        </div>
-                }
-                @if (!User.Identity.IsAuthenticated)
-                {
-                    <a class="btn btn-default" asp-controller="CustomerMovie" asp-action="index" style="font-weight: 400; font-size: 16px; float: right; border-radius: 5px; padding: 10px 17px 7px 17px;">Sign in</a>
-                }
-            </div>
+                <div style=" float: right; margin-top: -7px; margin-left: -25px;">
+                    <div class="text-center" style="padding-left: 25px; padding-right: 10px; display: inline-block; color: white; padding-top: 15px;">
+                        <div style="margin-left: 15px;"> @User.Identity.Name </div>
+                    </div>
+                    <div style="display: inline-block;">
+                        <a asp-controller="Home" asp-action="Logout"><button class="btn btn-default">Logout</button></a>
+                    </div>
+                </div>
+            }
+            @if (!User.Identity.IsAuthenticated)
+            {
+                <a class="btn btn-default" asp-controller="CustomerMovie" asp-action="index" style="font-weight: 400; font-size: 16px; float: right; border-radius: 5px; padding: 10px 17px 7px 17px;">Sign in</a>
+            }
         </div>
-    </nav>
+    </div>
+</nav>
+<span id="CRFSAuthentication" hidden>@Html.AntiForgeryToken()</span>
     <div class="container body-content">
         @RenderBody()
         <hr />
@@ -81,27 +105,27 @@
         <script src="~/lib/jquery/dist/jquery.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
         <script src="~/js/site.js" asp-append-version="true"></script>
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+        <link href="~/lib/select2-4.0.3/dist/css/select2.min.css" rel="stylesheet" />
+        <script src="~/lib/select2-4.0.3/dist/js/select2.min.js"></script>
         <link rel="stylesheet" href="~/lib/components-font-awesome/css/font-awesome.min.css">
 
     </environment>
     <environment names="Staging,Production">
-        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
-                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+        <script src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
                 asp-fallback-test="window.jQuery"
                 crossorigin="anonymous"
                 integrity="sha384-K+ctZQ+LL8q6tP7I94W+qzQsfRV2a+AfHIi9k8z8l9ggpc8X+Ytst4yBo/hH+8Fk">
         </script>
-        <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
-                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+        <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                asp-fallback-src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
                 asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
                 crossorigin="anonymous"
                 integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
         </script>
         <script src="~/js/site.min.js" asp-append-version="true"></script>
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+        <link href="~/lib/select2-4.0.3/dist/css/select2.min.css" rel="stylesheet" />
+        <script src="~/lib/select2-4.0.3/dist/js/select2.min.js"></script>
         <link rel="stylesheet" href="~/lib/components-font-awesome/css/font-awesome.min.css">
 
     </environment>

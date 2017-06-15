@@ -156,7 +156,7 @@ namespace fletnix.Data.Seeds
                 };
 
                 foreach (var claim in claims)
-                {
+                { 
                     identityUser.Claims.Add(new IdentityUserClaim<string>
                     {
                         ClaimType = claim.Type,

@@ -15,7 +15,7 @@ using Microsoft.EntityFrameworkCore.Storage;
 
 namespace fletnix.Controllers
 {
-    [Authorize(Policy = "Financial")]
+    [Authorize]
     public class ReportController : Controller
     {
         private fletnixContext _context;
@@ -29,7 +29,8 @@ namespace fletnix.Controllers
         {
             return View();
         }
-
+        
+        [Authorize(Policy = "financial")]
         public async Task<IActionResult> Awards(int? startYear, int? endYear,  int? page)
         {
 
@@ -38,7 +39,7 @@ namespace fletnix.Controllers
             object pagedData = null;
             if (startYear == null)
             {
-                startYear = 1900;
+                startYear = 2005;
             }
             if (endYear == null)
             {
@@ -73,7 +74,7 @@ namespace fletnix.Controllers
                 if (movie.MovieAward != null)
                 {
                     dict[movie.Movie.MovieId].MovieAwardList.Add(movie.MovieAward);
-                    if (movie.MovieAward.Result == "Won")
+                    if (movie.MovieAward.Result == "Won" || movie.MovieAward.Result == "won")
                     {
                         dict[movie.Movie.MovieId].WonCount++;
                     }
@@ -92,6 +93,7 @@ namespace fletnix.Controllers
             return View(pagedData);
         }
 
+        [Authorize(Policy = "CEO")]
         public async Task<IActionResult> Rating(string filter)
         {
             List<RatingPriceIndexViewModel> report = null;

@@ -1,0 +1,10 @@
+/Users/ivobrands/Projects/fletnix/auth-server/IdentityServer/IdentityServer/bin/Release/netcoreapp1.1/IdentityServer.deps.json
+/Users/ivobrands/Projects/fletnix/auth-server/IdentityServer/IdentityServer/bin/Release/netcoreapp1.1/IdentityServer.runtimeconfig.json
+/Users/ivobrands/Projects/fletnix/auth-server/IdentityServer/IdentityServer/bin/Release/netcoreapp1.1/IdentityServer.runtimeconfig.dev.json
+/Users/ivobrands/Projects/fletnix/auth-server/IdentityServer/IdentityServer/bin/Release/netcoreapp1.1/IdentityServer.dll
+/Users/ivobrands/Projects/fletnix/auth-server/IdentityServer/IdentityServer/bin/Release/netcoreapp1.1//IdentityServer.pdb
+/Users/ivobrands/Projects/fletnix/auth-server/IdentityServer/IdentityServer/obj/Release/netcoreapp1.1/IdentityServer.csprojResolveAssemblyReference.cache
+/Users/ivobrands/Projects/fletnix/auth-server/IdentityServer/IdentityServer/obj/Release/netcoreapp1.1/IdentityServer.csproj.CoreCompileInputs.cache
+/Users/ivobrands/Projects/fletnix/auth-server/IdentityServer/IdentityServer/obj/Release/netcoreapp1.1/IdentityServer.AssemblyInfo.cs
+/Users/ivobrands/Projects/fletnix/auth-server/IdentityServer/IdentityServer/obj/Release/netcoreapp1.1/IdentityServer.dll
+/Users/ivobrands/Projects/fletnix/auth-server/IdentityServer/IdentityServer/obj/Release/netcoreapp1.1/IdentityServer.pdb

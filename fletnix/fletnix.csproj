@@ -60,5 +60,28 @@
     <Folder Include="wwwroot\lib\components-font-awesome\scss" />
     <Folder Include="wwwroot\lib\jquery-bar-rating\dist\themes" />
     <Folder Include="wwwroot\lib\jquery-bar-rating\themes" />
+    <Folder Include="wwwroot\lib\select2-4.0.3\src\js\select2\compat" />
+    <Folder Include="wwwroot\lib\select2-4.0.3\src\js\select2\data" />
+    <Folder Include="wwwroot\lib\select2-4.0.3\src\js\select2\dropdown" />
+    <Folder Include="wwwroot\lib\select2-4.0.3\src\js\select2\i18n" />
+    <Folder Include="wwwroot\lib\select2-4.0.3\src\js\select2\selection" />
+    <Folder Include="wwwroot\lib\select2-4.0.3\src\scss\mixins" />
+    <Folder Include="wwwroot\lib\select2-4.0.3\src\scss\theme\classic" />
+    <Folder Include="wwwroot\lib\select2-4.0.3\src\scss\theme\default" />
+    <Folder Include="wwwroot\lib\select2-4.0.3\tests\a11y" />
+    <Folder Include="wwwroot\lib\select2-4.0.3\tests\data" />
+    <Folder Include="wwwroot\lib\select2-4.0.3\tests\dropdown" />
+    <Folder Include="wwwroot\lib\select2-4.0.3\tests\integration" />
+    <Folder Include="wwwroot\lib\select2-4.0.3\tests\options" />
+    <Folder Include="wwwroot\lib\select2-4.0.3\tests\results" />
+    <Folder Include="wwwroot\lib\select2-4.0.3\tests\selection" />
+    <Folder Include="wwwroot\lib\select2-4.0.3\tests\utils" />
+    <Folder Include="wwwroot\lib\select2-4.0.3\tests\vendor" />
+    <Folder Include="wwwroot\lib\select2-4.0.3\vendor" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="wwwroot\lib\select2-4.0.3\.gitignore" />
+    <Content Include="wwwroot\lib\select2-4.0.3\.jshintrc" />
+    <Content Include="wwwroot\lib\select2-4.0.3\docs\dist\.gitkeep" />
   </ItemGroup>
 </Project>

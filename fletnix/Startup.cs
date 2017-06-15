@@ -45,7 +45,7 @@ namespace fletnix
             services.AddDistributedRedisCache(options =>
             {
                 options.InstanceName = "rediscache";
-                options.Configuration = "13.81.213.106:6379,password=Y3IxavvW61lPp/RkbjdleoBk5kwET453cKd7Ru7XOZc=,ssl=false,abortConnect=False";
+                options.Configuration = Configuration["redisCache"];
             });
 
             services.AddSession();
@@ -60,8 +60,11 @@ namespace fletnix
                 options.AddPolicy("customer", policy =>
                     policy.RequireClaim(ClaimTypes.Role, "customer","admin"));
 
-                options.AddPolicy("Financial", policy =>
-                    policy.RequireClaim(ClaimTypes.Role, "Financial","admin"));
+                options.AddPolicy("financial", policy =>
+                    policy.RequireClaim(ClaimTypes.Role, "financial","admin"));
+                
+                options.AddPolicy("CEO", policy =>
+                    policy.RequireClaim(ClaimTypes.Role, "CEO"));
             });
 
 
@@ -75,9 +78,7 @@ namespace fletnix
             {
                 context.Response.Headers.Add("X-Frame-Options", "SAMEORIGIN");
                 context.Response.Headers.Add("X-XSS-Protection", "1; mode=block");
-                context.Response.Headers.Add("X-Content-Type-Options", "nosniff");
-                context.Response.Headers.Add("Strict-Transport-Security", "max-age=31536000; includeSubDomains");
-                
+                context.Response.Headers.Add("X-Content-Type-Options", "nosniff");                
                 // Do work that doesn't write to the Response.
                 await next.Invoke();
                 // Do logging or other work that doesn't write to the Response.
@@ -110,11 +111,10 @@ namespace fletnix
                 
                 AuthenticationScheme = "oidc",
                 SignInScheme = "cookie",
-                Authority = "http://localhost:5002/",
+                Authority = Configuration["fletnixAuthenticationServer"],
                 //Authority = "https://fletniksauthentication.azurewebsites.net/",
                 RequireHttpsMetadata = false,
-                ClientId = "fletnixDevelopment",
-                //ClientId = "fletnix",
+                ClientId = Configuration["clientId"],
                 //ResponseType = "code id_token",
                 Scope = { "openid", "profile","role"},
                 GetClaimsFromUserInfoEndpoint = true,

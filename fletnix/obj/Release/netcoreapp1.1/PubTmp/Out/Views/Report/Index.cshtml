@@ -1,0 +1,15 @@
+@{
+    ViewBag.Title = "Reports";
+    Layout = "_Layout";
+}
+
+<h2>Reports</h2>
+
+<div class="row">
+    <div class="col-md-2">
+        <a asp-controller="Report" asp-action="Awards"><button class="btn btn-default">Movie Awards</button></a>
+    </div>
+    <div class="col-md-2">
+        <a asp-controller="Report" asp-action="Rating" ><button class="btn btn-default">Movie Ratings</button></a>
+    </div>
+</div>

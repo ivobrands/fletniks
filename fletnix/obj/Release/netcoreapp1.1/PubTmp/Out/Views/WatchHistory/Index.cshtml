@@ -1,0 +1,250 @@
+@using fletnix.ViewModels
+@{
+    Layout = "_Layout";
+}
+
+<div class="container-fluid" style="margin-top: 50px;">
+    <h2 style="color: #8E8E8E;  font-size: 18px; font-family: arial;">Watch history</h2>
+    <div class="row">
+        @foreach (var history in (List<PopularMoviesViewModel>) Model)
+        {
+            <div class="col-md-2" style="height: 150px;">
+                <div style="overflow: hidden;">
+                        <a asp-route-id="@history.Movie.MovieId" asp-action="Details" asp-controller="CustomerMovie">
+                            <div style="">
+                                @history.Movie.Title 
+                            </div>
+                        </a>
+                    <div style="position: absolute; top: 100px;">
+                        @if (history.Review != null)
+                        {
+                            <div>Reviewed</div>
+                            <div class="openEditFeedback" onclick="$('#editfeedbackModal').modal('toggle');" data-method="patch" data-year="@history.Movie.PublicationYear" data-id="@history.Movie.MovieId" data-title="@history.Movie.Title" data-comment="@history.Review.Comment" data-rating="@history.Review.Rating"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Edit</div>
+                            <div class="openFeedback" onclick="removeReview(@history.Review.Rating, '@history.Review.Comment', @history.Review.MovieId);" data-method="delete" data-year="@history.Movie.PublicationYear" id="deleteFeedback" data-rating="@history.Review.Rating" data-title="@history.Movie.Title" data-id="@history.Movie.MovieId"><i class="fa fa-minus-circle" aria-hidden="true"></i>Delete</div>
+                        }
+                        else
+                        {
+                            <div class="openFeedback" onclick="$('#feedbackModal').modal('toggle');" data-method="post" data-title="@history.Movie.Title" data-id="@history.Movie.MovieId" data-year="@history.Movie.PublicationYear">Review <i class="fa fa-signal" aria-hidden="true"></i></div>
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+
+<div class="modal fade" id="feedbackModal" style="overflow:hidden;" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h3 class="modal-title" id="myCastModalLabel">Give a review!</h3>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+
+                    <form method="post" id="castForm" action="/api/movie/director">
+                        <div class="col-md-3">
+                            <div style="padding: 10px; text-align: center; width: 95%; background-color: white;">
+                                <img src="~/images/review.jpg" width="100%"/>
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label">Comment</label>
+                                        <div class="col-md-10">
+                                            <textarea rows="4" cols="50" class="form-control" style="width: 100%" id="comment"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label class="col-md-2 control-label">Rating</label>
+                                    <div class="br-theme-bars-1to10 col-md-10">
+                                        <select id="rating">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default " style="color: black; border: 1px solid #CCCCCC; background-color: white;" data-dismiss="modal">Close</button>
+                <button type="button" onClick="saveReview($('#rating').val(), $('#comment').val() )"class ="btn btn-default" style="color: black;">Save changes</button></div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="editfeedbackModal" style="overflow:hidden;" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h3 class="modal-title" id="editMyCastModalLabel">Give a review!</h3>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+
+                    <form method="post" id="feedbackForm" action="/api/feedback/edit">
+                        <div class="col-md-3">
+                            <div style="padding: 10px; text-align: center; width: 95%; background-color: white;">
+                                <img src="~/images/review.jpg" width="100%"/>
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label">Comment</label>
+                                        <div class="col-md-10">
+                                            <textarea rows="4" cols="50" class="form-control" style="width: 100%" id="editComment"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label class="col-md-2 control-label">Rating</label>
+                                    <div class="br-theme-bars-1to10 col-md-10">
+                                        <select id="rating2">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default " style="color: black; border: 1px solid #CCCCCC; background-color: white;" data-dismiss="modal">Close</button>
+                <button type="button" onClick="editReview($('#rating2').val(), $('#editComment').val() )"class ="btn btn-default" style="color: black;">Save changes</button></div>
+        </div>
+    </div>
+</div>
+
+<link rel="stylesheet" href="~/lib/jquery-bar-rating/dist/themes/bars-1to10.css"/>
+
+@section scripts {
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="~/lib/jquery-bar-rating/dist/jquery.barrating.min.js"></script>
+    <script type="text/javascript">
+        var selectedId = 0;
+        $(document).on("click",
+            ".openFeedback",
+            function() {
+                selectedId = $(this).data('id');
+            });
+        
+        $(document).on("click",
+            ".openEditFeedback",
+            function() {
+                selectedId = $(this).data('id');
+                $("#editComment").val($(this).data('comment'));
+                $('#rating2').barrating('set', $(this).data('rating'));
+
+            });
+
+        $(function() {
+            $('#rating').barrating('show',
+                {
+                    theme: 'bars-1to10'
+                });
+        });
+
+        $(function() {
+            $('#rating2').barrating('show',
+                {
+                    theme: 'bars-1to10'
+                });
+        });
+        
+        function saveReview(rating, comment) {
+            if (rating < 1 || rating > 10) {
+                alert("Geef een rating tussen de 1 en de 10");
+            } else {
+                if (comment.length < 10) {
+                    alert("de comment moet tenminste 10 tekens bevatten");
+                } else {
+                    $.ajax
+                    ({
+                        type: "POST",
+                        url: "/api/customerFeedback/add",
+                        beforeSend: (xhr) => { xhr.setRequestHeader('Content-Type', 'application/json') },
+                        dataType: 'json',
+                        async: true,
+                        data: JSON.stringify({ rating: rating, comment: comment, movieid: selectedId })
+                    }).done(function(data) {
+                        window.location.reload();
+                    });
+                }
+            }
+        }
+        
+        function editReview(rating, comment) {
+            if (rating < 1 || rating > 10) {
+                alert("Geef een rating tussen de 1 en de 10");
+            } else {
+                if (comment.length < 10) {
+                    alert("de comment moet tenminste 10 tekens bevatten");
+                } else {
+                    $.ajax
+                    ({
+                        type: "POST",
+                        url: "/api/customerFeedback/edit",
+                        beforeSend: (xhr) => { xhr.setRequestHeader('Content-Type', 'application/json') },
+                        dataType: 'json',
+                        async: true,
+                        data: JSON.stringify({ rating: rating, comment: comment, movieid: selectedId })
+                    }).done(function(data) {
+                        window.location.reload();
+                    });
+                }
+            }
+        }
+        
+        function removeReview(rating, comment, id) {
+            $.ajax
+            ({
+                type: "POST",
+                url: "/api/customerFeedback/delete",
+                beforeSend: (xhr) => { xhr.setRequestHeader('Content-Type', 'application/json') },
+                dataType: 'json',
+                async: true,
+                data: JSON.stringify({ rating: rating, comment: comment, movieid: id })
+            }).done(function(data) {
+                window.location.reload();
+            });
+        }
+    </script>
+}
